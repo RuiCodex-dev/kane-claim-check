@@ -1,0 +1,654 @@
+{
+  "tool": "kane-claim-check",
+  "version": "0.1.0",
+  "checkedAt": "2026-11-12T08:05:12.080Z",
+  "url": "https://ruicodex.com/Products/pixelcut-pro",
+  "batches": [
+    {
+      "label": "source page",
+      "assertionMode": "dom",
+      "exitCode": 0,
+      "durationMs": 50482,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 7.05,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"PixelCut Pro: AI Photo Background Remover\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: 'PixelCut Pro: AI Photo Background Remover | Rui Codex' -> 'PixelCut Pro: AI Photo Background Remover | Rui Codex'; contains 'PixelCut Pro: AI Photo Background Remover' -> PASS",
+          "kaneCheck": {
+            "extracted": "PixelCut Pro: AI Photo Background Remover | Rui Codex",
+            "operator": "contains",
+            "expected": "PixelCut Pro: AI Photo Background Remover"
+          }
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"PixelCut Pro: AI Photo Velvet Remover\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: 'PixelCut Pro: AI Photo Background Remover | Rui Codex' -> 'PixelCut Pro: AI Photo Background Remover | Rui Codex'; contains 'PixelCut Pro: AI Photo Velvet Remover' -> FAIL",
+          "kaneCheck": {
+            "extracted": "PixelCut Pro: AI Photo Background Remover | Rui Codex",
+            "operator": "contains",
+            "expected": "PixelCut Pro: AI Photo Velvet Remover"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 1,
+          "text": "This page states that the app is free to download",
+          "answer": true,
+          "reason": "Checking the app download pricing statement: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 2,
+          "text": "This page states that the app offers in-app purchases",
+          "answer": true,
+          "reason": "Checking the in-app purchases key fact: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 3,
+          "text": "This page states that the app contains ads",
+          "answer": true,
+          "reason": "Checking the ads key fact: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 4,
+          "text": "This page states that the app has no ads",
+          "answer": false,
+          "reason": "Checking the visible no-ads statement: value: 'false' -> 'false'; equals 'true' -> FAIL",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 5,
+          "text": "This page states that the content rating is PEGI 3",
+          "answer": true,
+          "reason": "Checking the content rating key fact: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        }
+      ],
+      "stderrTail": [
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "https://ruicodex.com/Products/pixelcut-pro",
+      "title": "PixelCut Pro: AI Photo Background Remover | Rui Codex"
+    },
+    {
+      "label": "Google Play",
+      "assertionMode": "dom",
+      "exitCode": 0,
+      "durationMs": 43784,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 7.64,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"PixelCut Pro: AI BG Remover -\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: 'PixelCut Pro: AI BG Remover - Apps on Google Play' -> 'PixelCut Pro: AI BG Remover - Apps on Google Play'; contains 'PixelCut Pro: AI BG Remover -' -> PASS",
+          "kaneCheck": {
+            "extracted": "PixelCut Pro: AI BG Remover - Apps on Google Play",
+            "operator": "contains",
+            "expected": "PixelCut Pro: AI BG Remover -"
+          }
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Velvet Pro: AI BG Remover -\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: 'PixelCut Pro: AI BG Remover - Apps on Google Play' -> 'PixelCut Pro: AI BG Remover - Apps on Google Play'; contains 'Velvet Pro: AI BG Remover -' -> FAIL",
+          "kaneCheck": {
+            "extracted": "PixelCut Pro: AI BG Remover - Apps on Google Play",
+            "operator": "contains",
+            "expected": "Velvet Pro: AI BG Remover -"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 0,
+          "text": "The app name shown on this store listing is \"PixelCut Pro\" (ignoring letter case and punctuation)",
+          "answer": true,
+          "reason": "Reading the app name from the store listing: value: 'pixelcutpro' -> 'pixelcutpro'; equals 'pixelcutpro' -> PASS",
+          "kaneCheck": {
+            "extracted": "pixelcutpro",
+            "operator": "equals",
+            "expected": "pixelcutpro"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 0,
+          "text": "The app name shown on this store listing is clearly a different app than \"PixelCut Pro\"",
+          "answer": false,
+          "reason": "Checking whether the store listing app differs from PixelCut Pro: value: 'true' -> 'true'; equals 'false' -> FAIL",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "false"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 1,
+          "text": "This store listing shows that the app is free to install: there is no purchase price to pay before installing it",
+          "answer": true,
+          "reason": "Checking whether the app is free to install: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 1,
+          "text": "This store listing shows a purchase price that must be paid before the app can be installed",
+          "answer": false,
+          "reason": "Checking whether a purchase price is required before installation: value: 'false' -> 'false'; equals 'true' -> FAIL",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 2,
+          "text": "This store listing states that the app offers in-app purchases",
+          "answer": true,
+          "reason": "Checking for an in-app purchases statement: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 2,
+          "text": "This store listing gives no indication anywhere that the app offers in-app purchases",
+          "answer": false,
+          "reason": "Checking for an in-app purchases statement: value: 'true' -> 'true'; equals 'false' -> FAIL",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "false"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 3,
+          "text": "This store listing states that the app contains ads",
+          "answer": true,
+          "reason": "Checking for a contains ads statement: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 3,
+          "text": "This store listing gives no indication anywhere that the app contains ads",
+          "answer": false,
+          "reason": "Checking for a contains ads statement: value: 'true' -> 'true'; equals 'false' -> FAIL",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "false"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 5,
+          "text": "This store listing shows the content rating PEGI 3",
+          "answer": true,
+          "reason": "Reading the store listing content rating: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 5,
+          "text": "This store listing shows a content rating that is not PEGI 3",
+          "answer": false,
+          "reason": "Checking whether the content rating differs from PEGI 3: value: 'false' -> 'false'; equals 'true' -> FAIL",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "true"
+          }
+        }
+      ],
+      "stderrTail": [
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.ruicodex.pixelcut_pro",
+      "title": "PixelCut Pro: AI BG Remover - Apps on Google Play"
+    },
+    {
+      "label": "App Store",
+      "assertionMode": "dom",
+      "exitCode": 0,
+      "durationMs": 48734,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 7.18,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"‎PixelCut Pro - AI BG Remover\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: '\\u200ePixelCut Pro - AI BG Remover App - App Store' -> '\\u200ePixelCut Pro - AI BG Remover App - App Store'; contains '\\u200ePixelCut Pro - AI BG Remover' -> PASS",
+          "kaneCheck": {
+            "extracted": "‎PixelCut Pro - AI BG Remover App - App Store",
+            "operator": "contains",
+            "expected": "‎PixelCut Pro - AI BG Remover"
+          }
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Velvet Pro - AI BG Remover\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: '\\u200ePixelCut Pro - AI BG Remover App - App Store' -> '\\u200ePixelCut Pro - AI BG Remover App - App Store'; contains 'Velvet Pro - AI BG Remover' -> FAIL",
+          "kaneCheck": {
+            "extracted": "‎PixelCut Pro - AI BG Remover App - App Store",
+            "operator": "contains",
+            "expected": "Velvet Pro - AI BG Remover"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 0,
+          "text": "The app name shown on this store listing is \"PixelCut Pro\" (ignoring letter case and punctuation)",
+          "answer": true,
+          "reason": "Reading the app name from the store listing: value: 'PixelCut Pro' -> 'pixelcut pro' after ['strip', 'lowercase']; equals 'PixelCut Pro' -> 'pixelcut pro' -> PASS",
+          "kaneCheck": {
+            "extracted": "PixelCut Pro",
+            "operator": "equals",
+            "expected": "PixelCut Pro"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 0,
+          "text": "The app name shown on this store listing is clearly a different app than \"PixelCut Pro\"",
+          "answer": false,
+          "reason": "Checking the app name in the store listing: value: 'false' -> 'false'; equals 'true' -> FAIL",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 1,
+          "text": "This store listing shows that the app is free to install: there is no purchase price to pay before installing it",
+          "answer": true,
+          "reason": "Checking the store listing installation price: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 1,
+          "text": "This store listing shows a purchase price that must be paid before the app can be installed",
+          "answer": false,
+          "reason": "Checking the store listing installation price: value: 'false' -> 'false'; equals 'true' -> FAIL",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 2,
+          "text": "This store listing states that the app offers in-app purchases",
+          "answer": true,
+          "reason": "Checking the store listing in-app purchase indication: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 2,
+          "text": "This store listing gives no indication anywhere that the app offers in-app purchases",
+          "answer": false,
+          "reason": "Checking the store listing in-app purchase indication: value: 'true' -> 'true'; equals 'false' -> FAIL",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "false"
+          }
+        }
+      ],
+      "stderrTail": [
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "https://apps.apple.com/us/app/pixelcut-pro-ai-bg-remover/id6777847573",
+      "title": "‎PixelCut Pro - AI BG Remover App - App Store"
+    }
+  ],
+  "rows": [
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.pixelcut_pro",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.pixelcut_pro",
+      "claimType": "listing-name",
+      "statement": "the store link opens the listing for \"PixelCut Pro\"",
+      "sourceQuote": "PixelCut Pro",
+      "verdict": "PROVED",
+      "why": "Reading the app name from the store listing: value: 'pixelcutpro' -> 'pixelcutpro'; equals 'pixelcutpro' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.pixelcut_pro",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.pixelcut_pro",
+      "claimType": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free to download with daily limits, ads and optional Pro, lifetime or per-photo purchases.",
+      "verdict": "PROVED",
+      "why": "Checking whether the app is free to install: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.pixelcut_pro",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.pixelcut_pro",
+      "claimType": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "In-app purchases",
+      "verdict": "PROVED",
+      "why": "Checking for an in-app purchases statement: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.pixelcut_pro",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.pixelcut_pro",
+      "claimType": "contains-ads",
+      "statement": "the app contains ads",
+      "sourceQuote": "Contains ads",
+      "verdict": "PROVED",
+      "why": "Checking for a contains ads statement: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.pixelcut_pro",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.pixelcut_pro",
+      "claimType": "content-rating",
+      "statement": "the content rating is PEGI 3",
+      "sourceQuote": "Content rating: PEGI 3",
+      "verdict": "PROVED",
+      "why": "Reading the store listing content rating: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "App Store",
+      "targetUrl": "https://apps.apple.com/us/app/pixelcut-pro-ai-bg-remover/id6777847573",
+      "finalUrl": "https://apps.apple.com/us/app/pixelcut-pro-ai-bg-remover/id6777847573",
+      "claimType": "listing-name",
+      "statement": "the store link opens the listing for \"PixelCut Pro\"",
+      "sourceQuote": "PixelCut Pro",
+      "verdict": "PROVED",
+      "why": "Reading the app name from the store listing: value: 'PixelCut Pro' -> 'pixelcut pro' after ['strip', 'lowercase']; equals 'PixelCut Pro' -> 'pixelcut pro' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "App Store",
+      "targetUrl": "https://apps.apple.com/us/app/pixelcut-pro-ai-bg-remover/id6777847573",
+      "finalUrl": "https://apps.apple.com/us/app/pixelcut-pro-ai-bg-remover/id6777847573",
+      "claimType": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free to download with daily limits, ads and optional Pro, lifetime or per-photo purchases.",
+      "verdict": "PROVED",
+      "why": "Checking the store listing installation price: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "App Store",
+      "targetUrl": "https://apps.apple.com/us/app/pixelcut-pro-ai-bg-remover/id6777847573",
+      "finalUrl": "https://apps.apple.com/us/app/pixelcut-pro-ai-bg-remover/id6777847573",
+      "claimType": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "In-app purchases",
+      "verdict": "PROVED",
+      "why": "Checking the store listing in-app purchase indication: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    }
+  ],
+  "sourceRows": [
+    {
+      "claimType": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free to download with daily limits, ads and optional Pro, lifetime or per-photo purchases.",
+      "verdict": "PROVED",
+      "why": "Checking the app download pricing statement: value: 'true' -> 'true'; equals 'true' -> PASS"
+    },
+    {
+      "claimType": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "In-app purchases",
+      "verdict": "PROVED",
+      "why": "Checking the in-app purchases key fact: value: 'true' -> 'true'; equals 'true' -> PASS"
+    },
+    {
+      "claimType": "contains-ads",
+      "statement": "the app contains ads",
+      "sourceQuote": "Contains ads",
+      "verdict": "PROVED",
+      "why": "Checking the ads key fact: value: 'true' -> 'true'; equals 'true' -> PASS"
+    },
+    {
+      "claimType": "no-ads",
+      "statement": "the app has no ads",
+      "sourceQuote": "Pro, available monthly or yearly with a three-day free trial, adds a larger daily allowance, all templates, HD export up to 2048 by 2048 pixels, batch mode and no ads or watermark.",
+      "verdict": "REFUTED",
+      "why": "Checking the visible no-ads statement: value: 'false' -> 'false'; equals 'true' -> FAIL"
+    },
+    {
+      "claimType": "content-rating",
+      "statement": "the content rating is PEGI 3",
+      "sourceQuote": "Content rating: PEGI 3",
+      "verdict": "PROVED",
+      "why": "Checking the content rating key fact: value: 'true' -> 'true'; equals 'true' -> PASS"
+    }
+  ],
+  "notes": [
+    "Skipped \"the app has no ads\": Kane did not confirm the page states it (extractor and Kane disagree; check the extractor rule)."
+  ],
+  "finalUrl": "https://ruicodex.com/Products/pixelcut-pro",
+  "title": "PixelCut Pro: AI Photo Background Remover | Rui Codex",
+  "productName": "PixelCut Pro",
+  "claims": [
+    {
+      "type": "listing-name",
+      "statement": "the store link opens the listing for \"PixelCut Pro\"",
+      "sourceQuote": "PixelCut Pro",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "The app name shown on this store listing is \"PixelCut Pro\" (ignoring letter case and punctuation)",
+      "notP": "The app name shown on this store listing is clearly a different app than \"PixelCut Pro\""
+    },
+    {
+      "type": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free to download with daily limits, ads and optional Pro, lifetime or per-photo purchases.",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "This store listing shows that the app is free to install: there is no purchase price to pay before installing it",
+      "notP": "This store listing shows a purchase price that must be paid before the app can be installed"
+    },
+    {
+      "type": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "In-app purchases",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "This store listing states that the app offers in-app purchases",
+      "notP": "This store listing gives no indication anywhere that the app offers in-app purchases"
+    },
+    {
+      "type": "contains-ads",
+      "statement": "the app contains ads",
+      "sourceQuote": "Contains ads",
+      "appliesTo": [
+        "play",
+        "fixture"
+      ],
+      "p": "This store listing states that the app contains ads",
+      "notP": "This store listing gives no indication anywhere that the app contains ads"
+    },
+    {
+      "type": "no-ads",
+      "statement": "the app has no ads",
+      "sourceQuote": "Pro, available monthly or yearly with a three-day free trial, adds a larger daily allowance, all templates, HD export up to 2048 by 2048 pixels, batch mode and no ads or watermark.",
+      "appliesTo": [
+        "play",
+        "fixture"
+      ],
+      "p": "This store listing gives no indication anywhere that the app contains ads",
+      "notP": "This store listing states that the app contains ads"
+    },
+    {
+      "type": "content-rating",
+      "statement": "the content rating is PEGI 3",
+      "sourceQuote": "Content rating: PEGI 3",
+      "appliesTo": [
+        "play",
+        "fixture"
+      ],
+      "p": "This store listing shows the content rating PEGI 3",
+      "notP": "This store listing shows a content rating that is not PEGI 3"
+    }
+  ],
+  "targets": [
+    {
+      "kind": "play",
+      "label": "Google Play",
+      "key": "play:com.ruicodex.pixelcut_pro",
+      "url": "https://play.google.com/store/apps/details?id=com.ruicodex.pixelcut_pro",
+      "linkText": "GET IT ON Google Play (opens in a new tab)"
+    },
+    {
+      "kind": "appstore",
+      "label": "App Store",
+      "key": "appstore:6777847573",
+      "url": "https://apps.apple.com/us/app/pixelcut-pro-ai-bg-remover/id6777847573",
+      "linkText": "DOWNLOAD ON THE App Store (opens in a new tab)"
+    }
+  ],
+  "credits": 21.87,
+  "summary": {
+    "total": 8,
+    "PROVED": 8,
+    "REFUTED": 0,
+    "INCONCLUSIVE": 0,
+    "UNTRUSTED": 0,
+    "ABSENT": 0
+  },
+  "exitCode": 0,
+  "files": {
+    "json": "runs\\2026-11-12T08-05-12-080Z_ruicodex-com-Products-pixelcut-pro.json",
+    "md": "runs\\2026-11-12T08-05-12-080Z_ruicodex-com-Products-pixelcut-pro.md"
+  }
+}

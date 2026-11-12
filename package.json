@@ -1,0 +1,15 @@
+{
+  "name": "kane-claim-check",
+  "version": "0.1.0",
+  "description": "Prove what a page promises about its store listings, in a real browser, with Kane CLI. Every Kane run carries a known-false control.",
+  "type": "module",
+  "bin": { "claimcheck": "bin/claimcheck.mjs" },
+  "scripts": {
+    "start": "node bin/claimcheck.mjs serve",
+    "demo": "node bin/claimcheck.mjs demo",
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": { "node": ">=22" },
+  "license": "Apache-2.0",
+  "private": true
+}

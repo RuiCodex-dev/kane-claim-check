@@ -1,0 +1,55 @@
+:root {
+  --bg: #f6f7f9; --card: #fff; --ink: #14171c; --muted: #5b6370; --line: #e2e5ea; --accent: #1f5eff;
+  --proved: #0f7b3f; --refuted: #c2261b; --inconclusive: #a86400; --untrusted: #7a2fb3; --absent: #6b7280;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+header, main, footer { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+header { padding-top: 32px; }
+h1 { margin: 0 0 4px; font-size: 30px; letter-spacing: -0.02em; }
+.tag { margin: 0 0 20px; color: var(--muted); max-width: 70ch; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px; margin-bottom: 18px; }
+label { font-weight: 600; display: block; margin-bottom: 6px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; }
+input[type=url] { flex: 1 1 360px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; font: inherit; }
+button { padding: 10px 16px; border-radius: 8px; border: 0; background: var(--accent); color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+button:disabled { opacity: .5; cursor: wait; }
+button.link { background: none; color: var(--accent); padding: 0; font-weight: 600; text-decoration: underline; }
+.hint, .meta { color: var(--muted); font-size: 13.5px; }
+#log { margin: 14px 0 0; padding-left: 20px; font: 13px/1.6 ui-monospace, Consolas, monospace; color: var(--muted); max-height: 220px; overflow: auto; }
+#log:empty { display: none; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0 14px; }
+.chip { padding: 4px 10px; border-radius: 999px; font-size: 13px; font-weight: 600; border: 1px solid var(--line); }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 12px; font-weight: 700; color: #fff; }
+.badge[data-verdict=PROVED], .badge[data-verdict=TRUSTED] { background: var(--proved); }
+.badge[data-verdict=REFUTED] { background: var(--refuted); }
+.badge[data-verdict=INCONCLUSIVE] { background: var(--inconclusive); }
+.badge[data-verdict=UNTRUSTED] { background: var(--untrusted); }
+.badge[data-verdict=ABSENT] { background: var(--absent); }
+.quote { color: var(--muted); font-size: 13px; }
+#runs { padding-left: 18px; }
+#runs a { color: var(--accent); }
+footer { color: var(--muted); font-size: 12.5px; padding-bottom: 30px; }
+
+.legend { font-size: 13px; color: var(--muted); margin: -6px 0 12px; }
+.chip { font-size: 15px; padding: 6px 12px; }
+.steps { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 16px 0 6px; counter-reset: s; }
+.steps li { counter-increment: s; padding: 6px 10px; border-radius: 8px; background: var(--bg); border: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+.steps li::before { content: counter(s) ". "; font-weight: 700; }
+.steps li.active { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.steps li.done { color: var(--proved); border-color: #b8dfc8; background: #f1faf4; }
+.pair { display: inline-flex; gap: 6px; margin-bottom: 4px; flex-wrap: wrap; }
+.pill { font: 12px/1.4 ui-monospace, Consolas, monospace; padding: 1px 7px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+.pill[data-v=true] { border-color: #b8dfc8; }
+.pill[data-v=false] { border-color: #f0c2bd; }
+.diag { margin-top: 6px; padding: 6px 8px; border-left: 3px solid var(--inconclusive); background: #fff8ec; color: var(--ink); font-size: 13px; }
+details.kanecheck { margin-top: 4px; font-size: 12.5px; }
+details.kanecheck summary { cursor: pointer; color: var(--accent); }
+details.kanecheck code { font: 12px ui-monospace, Consolas, monospace; display: block; white-space: pre-wrap; color: var(--muted); }
+tr[data-verdict=REFUTED] td:first-child { box-shadow: inset 3px 0 0 var(--refuted); }
+tr[data-verdict=PROVED] td:first-child { box-shadow: inset 3px 0 0 var(--proved); }
+tr[data-verdict=INCONCLUSIVE] td:first-child { box-shadow: inset 3px 0 0 var(--inconclusive); }

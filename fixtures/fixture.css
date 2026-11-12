@@ -1,0 +1,7 @@
+body{font:16px/1.55 system-ui,sans-serif;margin:0;background:#fafafa;color:#1b1b1b}
+.wrap{max-width:760px;margin:0 auto;padding:28px 20px}
+.fixture{background:#fff7d6;border:1px solid #e8d48a;padding:8px 12px;border-radius:6px;font-size:13px}
+.btn{display:inline-block;background:#1b1b1b;color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
+.meta{display:flex;gap:14px;flex-wrap:wrap;color:#444;font-size:14px}
+.store{background:#fff;border:1px solid #ddd;border-radius:12px;padding:20px}
+.price{font-size:20px;font-weight:700}

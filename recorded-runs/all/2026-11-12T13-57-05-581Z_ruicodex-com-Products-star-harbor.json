@@ -1,0 +1,456 @@
+{
+  "tool": "kane-claim-check",
+  "version": "0.1.0",
+  "checkedAt": "2026-11-12T13:57:05.581Z",
+  "url": "https://ruicodex.com/Products/star-harbor",
+  "batches": [
+    {
+      "label": "source page",
+      "assertionMode": "dom",
+      "exitCode": 0,
+      "durationMs": 20040,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 1.94,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"Star Harbor: Space Station Production Strategy\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: 'Star Harbor: Space Station Production Strategy | Rui Codex' -> 'Star Harbor: Space Station Production Strategy | Rui Codex'; contains 'Star Harbor: Space Station Production Strategy' -> PASS",
+          "kaneCheck": {
+            "extracted": "Star Harbor: Space Station Production Strategy | Rui Codex",
+            "operator": "contains",
+            "expected": "Star Harbor: Space Station Production Strategy"
+          }
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Star Harbor: Space Station Velvet Strategy\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: 'Star Harbor: Space Station Production Strategy | Rui Codex' -> 'Star Harbor: Space Station Production Strategy | Rui Codex'; contains 'Star Harbor: Space Station Velvet Strategy' -> FAIL",
+          "kaneCheck": {
+            "extracted": "Star Harbor: Space Station Production Strategy | Rui Codex",
+            "operator": "contains",
+            "expected": "Star Harbor: Space Station Velvet Strategy"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 1,
+          "text": "This page states that the app is free to download",
+          "answer": true,
+          "reason": "Checking the free-download status in Key facts: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 2,
+          "text": "This page states that the app offers in-app purchases",
+          "answer": true,
+          "reason": "Checking the in-app-purchases status in Key facts: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 3,
+          "text": "This page states that the app contains ads",
+          "answer": true,
+          "reason": "Checking the ads status in Key facts: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 4,
+          "text": "This page states that the content rating is PEGI 3",
+          "answer": true,
+          "reason": "Checking the content rating in Key facts: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        }
+      ],
+      "stderrTail": [
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "https://ruicodex.com/Products/star-harbor",
+      "title": "Star Harbor: Space Station Production Strategy | Rui Codex"
+    },
+    {
+      "label": "Google Play",
+      "assertionMode": "dom",
+      "exitCode": 0,
+      "durationMs": 38874,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 9.34,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"Star Harbor: Space Station - Apps\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: 'Star Harbor: Space Station - Apps on Google Play' -> 'Star Harbor: Space Station - Apps on Google Play'; contains 'Star Harbor: Space Station - Apps' -> PASS",
+          "kaneCheck": {
+            "extracted": "Star Harbor: Space Station - Apps on Google Play",
+            "operator": "contains",
+            "expected": "Star Harbor: Space Station - Apps"
+          }
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Star Velvet Space Station - Apps\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: 'Star Harbor: Space Station - Apps on Google Play' -> 'Star Harbor: Space Station - Apps on Google Play'; contains 'Star Velvet Space Station - Apps' -> FAIL",
+          "kaneCheck": {
+            "extracted": "Star Harbor: Space Station - Apps on Google Play",
+            "operator": "contains",
+            "expected": "Star Velvet Space Station - Apps"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 0,
+          "text": "The app name shown on this store listing begins with \"Star Harbor\" (ignoring letter case and punctuation; a subtitle after it is allowed)",
+          "answer": true,
+          "reason": "Checking the normalized store listing app name: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 0,
+          "text": "The app name shown on this store listing is clearly a different app than \"Star Harbor\"",
+          "answer": false,
+          "reason": "Checking whether the listing app name differs from Star Harbor: value: 'false' -> 'false'; equals 'true' -> FAIL",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 1,
+          "text": "This store listing shows that the app is free to install",
+          "answer": true,
+          "reason": "Checking the installation action shown on the listing: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 1,
+          "text": "This store listing shows a purchase price that must be paid before the app can be installed",
+          "answer": false,
+          "reason": "Checking whether a required purchase price is displayed: value: 'false' -> 'false'; equals 'true' -> FAIL",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 2,
+          "text": "This store listing states that the app offers in-app purchases",
+          "answer": true,
+          "reason": "Checking the in-app purchases information badge: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 2,
+          "text": "This store listing gives no indication anywhere that the app offers in-app purchases",
+          "answer": false,
+          "reason": "Checking the in-app purchases indication: value: 'true' -> 'true'; equals 'false' -> FAIL",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "false"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 3,
+          "text": "This store listing states that the app contains ads",
+          "answer": true,
+          "reason": "Checking the contains ads information badge: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 3,
+          "text": "This store listing gives no indication anywhere that the app contains ads",
+          "answer": false,
+          "reason": "Checking the contains ads indication: value: 'true' -> 'true'; equals 'false' -> FAIL",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "false"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 4,
+          "text": "This store listing shows the content rating PEGI 3",
+          "answer": true,
+          "reason": "Checking the displayed content rating: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 4,
+          "text": "This store listing shows a content rating that is not PEGI 3",
+          "answer": false,
+          "reason": "Checking whether the displayed content rating differs from PEGI 3: value: 'false' -> 'false'; equals 'true' -> FAIL",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "true"
+          }
+        }
+      ],
+      "stderrTail": [
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.ruicodex.starharbor",
+      "title": "Star Harbor: Space Station - Apps on Google Play"
+    }
+  ],
+  "rows": [
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.starharbor",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.starharbor",
+      "claimType": "listing-name",
+      "statement": "the store link opens the listing for \"Star Harbor\"",
+      "sourceQuote": "Star Harbor",
+      "verdict": "PROVED",
+      "why": "Checking the normalized store listing app name: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.starharbor",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.starharbor",
+      "claimType": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free to download, with ads and optional purchases and no subscriptions.",
+      "verdict": "PROVED",
+      "why": "Checking the installation action shown on the listing: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.starharbor",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.starharbor",
+      "claimType": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "In-app purchases",
+      "verdict": "PROVED",
+      "why": "Checking the in-app purchases information badge: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.starharbor",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.starharbor",
+      "claimType": "contains-ads",
+      "statement": "the app contains ads",
+      "sourceQuote": "It is free to download, with ads and optional purchases and no subscriptions.",
+      "verdict": "PROVED",
+      "why": "Checking the contains ads information badge: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.starharbor",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.starharbor",
+      "claimType": "content-rating",
+      "statement": "the content rating is PEGI 3",
+      "sourceQuote": "Content rating: PEGI 3",
+      "verdict": "PROVED",
+      "why": "Checking the displayed content rating: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    }
+  ],
+  "sourceRows": [
+    {
+      "claimType": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free to download, with ads and optional purchases and no subscriptions.",
+      "verdict": "PROVED",
+      "why": "Checking the free-download status in Key facts: value: 'true' -> 'true'; equals 'true' -> PASS"
+    },
+    {
+      "claimType": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "In-app purchases",
+      "verdict": "PROVED",
+      "why": "Checking the in-app-purchases status in Key facts: value: 'true' -> 'true'; equals 'true' -> PASS"
+    },
+    {
+      "claimType": "contains-ads",
+      "statement": "the app contains ads",
+      "sourceQuote": "It is free to download, with ads and optional purchases and no subscriptions.",
+      "verdict": "PROVED",
+      "why": "Checking the ads status in Key facts: value: 'true' -> 'true'; equals 'true' -> PASS"
+    },
+    {
+      "claimType": "content-rating",
+      "statement": "the content rating is PEGI 3",
+      "sourceQuote": "Content rating: PEGI 3",
+      "verdict": "PROVED",
+      "why": "Checking the content rating in Key facts: value: 'true' -> 'true'; equals 'true' -> PASS"
+    }
+  ],
+  "notes": [],
+  "finalUrl": "https://ruicodex.com/Products/star-harbor",
+  "title": "Star Harbor: Space Station Production Strategy | Rui Codex",
+  "productName": "Star Harbor",
+  "claims": [
+    {
+      "type": "listing-name",
+      "statement": "the store link opens the listing for \"Star Harbor\"",
+      "sourceQuote": "Star Harbor",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "The app name shown on this store listing begins with \"Star Harbor\" (ignoring letter case and punctuation; a subtitle after it is allowed)",
+      "notP": "The app name shown on this store listing is clearly a different app than \"Star Harbor\""
+    },
+    {
+      "type": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free to download, with ads and optional purchases and no subscriptions.",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "This store listing shows that the app is free to install",
+      "notP": "This store listing shows a purchase price that must be paid before the app can be installed"
+    },
+    {
+      "type": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "In-app purchases",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "This store listing states that the app offers in-app purchases",
+      "notP": "This store listing gives no indication anywhere that the app offers in-app purchases"
+    },
+    {
+      "type": "contains-ads",
+      "statement": "the app contains ads",
+      "sourceQuote": "It is free to download, with ads and optional purchases and no subscriptions.",
+      "appliesTo": [
+        "play",
+        "fixture"
+      ],
+      "p": "This store listing states that the app contains ads",
+      "notP": "This store listing gives no indication anywhere that the app contains ads"
+    },
+    {
+      "type": "content-rating",
+      "statement": "the content rating is PEGI 3",
+      "sourceQuote": "Content rating: PEGI 3",
+      "appliesTo": [
+        "play",
+        "fixture"
+      ],
+      "p": "This store listing shows the content rating PEGI 3",
+      "notP": "This store listing shows a content rating that is not PEGI 3"
+    }
+  ],
+  "targets": [
+    {
+      "kind": "play",
+      "label": "Google Play",
+      "key": "play:com.ruicodex.starharbor",
+      "url": "https://play.google.com/store/apps/details?id=com.ruicodex.starharbor",
+      "linkText": "GET IT ON Google Play (opens in a new tab)"
+    }
+  ],
+  "credits": 11.28,
+  "summary": {
+    "total": 5,
+    "PROVED": 5,
+    "REFUTED": 0,
+    "INCONCLUSIVE": 0,
+    "UNTRUSTED": 0,
+    "ABSENT": 0
+  },
+  "exitCode": 0,
+  "files": {
+    "json": "runs\\2026-11-12T13-57-05-581Z_ruicodex-com-Products-star-harbor.json",
+    "md": "runs\\2026-11-12T13-57-05-581Z_ruicodex-com-Products-star-harbor.md"
+  }
+}

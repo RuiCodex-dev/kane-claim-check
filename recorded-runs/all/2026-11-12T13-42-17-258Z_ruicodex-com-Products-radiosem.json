@@ -1,0 +1,615 @@
+{
+  "tool": "kane-claim-check",
+  "version": "0.1.0",
+  "checkedAt": "2026-11-12T13:42:17.258Z",
+  "url": "https://ruicodex.com/Products/radiosem",
+  "batches": [
+    {
+      "label": "source page",
+      "assertionMode": "dom",
+      "exitCode": 0,
+      "durationMs": 23257,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 4.95,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"RadioSEM: Live Global FM Radio for\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: 'RadioSEM: Live Global FM Radio for Android and iPhone' -> 'RadioSEM: Live Global FM Radio for Android and iPhone'; contains 'RadioSEM: Live Global FM Radio for' -> PASS",
+          "kaneCheck": {
+            "extracted": "RadioSEM: Live Global FM Radio for Android and iPhone",
+            "operator": "contains",
+            "expected": "RadioSEM: Live Global FM Radio for"
+          }
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Velvet Live Global FM Radio for\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: 'RadioSEM: Live Global FM Radio for Android and iPhone' -> 'RadioSEM: Live Global FM Radio for Android and iPhone'; contains 'Velvet Live Global FM Radio for' -> FAIL",
+          "kaneCheck": {
+            "extracted": "RadioSEM: Live Global FM Radio for Android and iPhone",
+            "operator": "contains",
+            "expected": "Velvet Live Global FM Radio for"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 1,
+          "text": "This page states that the app is free to download",
+          "answer": true,
+          "reason": "Checking the app's free listing: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 2,
+          "text": "This page states that the app offers in-app purchases",
+          "answer": true,
+          "reason": "Checking the app's in-app-purchases listing: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 3,
+          "text": "This page states that the app contains ads",
+          "answer": true,
+          "reason": "Checking the app's ads listing: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        }
+      ],
+      "stderrTail": [
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "https://ruicodex.com/Products/radiosem",
+      "title": "RadioSEM: Live Global FM Radio for Android and iPhone"
+    },
+    {
+      "label": "Google Play",
+      "assertionMode": "dom",
+      "exitCode": 0,
+      "durationMs": 33268,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 6.83,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"RadioSEM: Live Global FM Radio -\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: 'RadioSEM: Live Global FM Radio - Apps on Google Play' -> 'RadioSEM: Live Global FM Radio - Apps on Google Play'; contains 'RadioSEM: Live Global FM Radio -' -> PASS",
+          "kaneCheck": {
+            "extracted": "RadioSEM: Live Global FM Radio - Apps on Google Play",
+            "operator": "contains",
+            "expected": "RadioSEM: Live Global FM Radio -"
+          }
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Velvet Live Global FM Radio -\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: 'RadioSEM: Live Global FM Radio - Apps on Google Play' -> 'RadioSEM: Live Global FM Radio - Apps on Google Play'; contains 'Velvet Live Global FM Radio -' -> FAIL",
+          "kaneCheck": {
+            "extracted": "RadioSEM: Live Global FM Radio - Apps on Google Play",
+            "operator": "contains",
+            "expected": "Velvet Live Global FM Radio -"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 0,
+          "text": "The app name shown on this store listing is \"RadioSEM\" (ignoring letter case and punctuation)",
+          "answer": true,
+          "reason": "Reading the app name from the store listing: value: 'radiosem' -> 'radiosem' after ['lowercase']; equals 'RadioSEM' -> 'radiosem' -> PASS",
+          "kaneCheck": {
+            "extracted": "radiosem",
+            "operator": "equals",
+            "expected": "RadioSEM"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 0,
+          "text": "The app name shown on this store listing is clearly a different app than \"RadioSEM\"",
+          "answer": false,
+          "reason": "Checking whether the listed app is different from RadioSEM: value: 'false' -> 'false'; equals 'true' -> FAIL",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 1,
+          "text": "This store listing shows that the app is free to install",
+          "answer": true,
+          "reason": "Checking the app installation action: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 1,
+          "text": "This store listing shows a purchase price that must be paid before the app can be installed",
+          "answer": false,
+          "reason": "Checking for a required purchase price: value: 'false' -> 'false'; equals 'true' -> FAIL",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 2,
+          "text": "This store listing states that the app offers in-app purchases",
+          "answer": true,
+          "reason": "Checking for the in-app purchases disclosure: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 2,
+          "text": "This store listing gives no indication anywhere that the app offers in-app purchases",
+          "answer": false,
+          "reason": "Checking for the in-app purchases disclosure: value: 'true' -> 'true'; equals 'false' -> FAIL",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "false"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 3,
+          "text": "This store listing states that the app contains ads",
+          "answer": true,
+          "reason": "Checking for the ads disclosure: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 3,
+          "text": "This store listing gives no indication anywhere that the app contains ads",
+          "answer": false,
+          "reason": "Checking for the ads disclosure: value: 'true' -> 'true'; equals 'false' -> FAIL",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "false"
+          }
+        }
+      ],
+      "stderrTail": [
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.ruicodex.radiosem",
+      "title": "RadioSEM: Live Global FM Radio - Apps on Google Play"
+    },
+    {
+      "label": "App Store",
+      "assertionMode": "dom",
+      "exitCode": 0,
+      "durationMs": 30755,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 6.51,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"‎RadioSEM: Global FM Radio App -\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: '\\u200eRadioSEM: Global FM Radio App - App Store' -> '\\u200eRadioSEM: Global FM Radio App - App Store'; contains '\\u200eRadioSEM: Global FM Radio App -' -> PASS",
+          "kaneCheck": {
+            "extracted": "‎RadioSEM: Global FM Radio App - App Store",
+            "operator": "contains",
+            "expected": "‎RadioSEM: Global FM Radio App -"
+          }
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Velvet Global FM Radio App -\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: '\\u200eRadioSEM: Global FM Radio App - App Store' -> '\\u200eRadioSEM: Global FM Radio App - App Store'; contains 'Velvet Global FM Radio App -' -> FAIL",
+          "kaneCheck": {
+            "extracted": "‎RadioSEM: Global FM Radio App - App Store",
+            "operator": "contains",
+            "expected": "Velvet Global FM Radio App -"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 0,
+          "text": "The app name shown on this store listing is \"RadioSEM\" (ignoring letter case and punctuation)",
+          "answer": true,
+          "reason": "Reading the app name from the store listing: value: 'RadioSEM' -> 'radiosem' after ['lowercase']; equals 'radiosem' -> PASS",
+          "kaneCheck": {
+            "extracted": "RadioSEM",
+            "operator": "equals",
+            "expected": "radiosem"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 0,
+          "text": "The app name shown on this store listing is clearly a different app than \"RadioSEM\"",
+          "answer": true,
+          "reason": "Reading the app name from the store listing: value: 'RadioSEM: Global FM Radio' -> 'radiosem: global fm radio' after ['lowercase']; not_equals 'radiosem' -> PASS",
+          "kaneCheck": {
+            "extracted": "RadioSEM: Global FM Radio",
+            "operator": "not_equals",
+            "expected": "radiosem"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 1,
+          "text": "This store listing shows that the app is free to install",
+          "answer": true,
+          "reason": "Checking the listing installation price: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 1,
+          "text": "This store listing shows a purchase price that must be paid before the app can be installed",
+          "answer": false,
+          "reason": "Checking the listing for an upfront installation price: value: 'false' -> 'false'; equals 'true' -> FAIL",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 2,
+          "text": "This store listing states that the app offers in-app purchases",
+          "answer": true,
+          "reason": "Checking the listing for in-app purchases: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 2,
+          "text": "This store listing gives no indication anywhere that the app offers in-app purchases",
+          "answer": false,
+          "reason": "Checking the listing for in-app purchases: value: 'true' -> 'true'; equals 'false' -> FAIL",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "false"
+          }
+        }
+      ],
+      "stderrTail": [
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "https://apps.apple.com/us/app/radiosem-global-fm-radio/id6806462026",
+      "title": "‎RadioSEM: Global FM Radio App - App Store"
+    },
+    {
+      "label": "App Store (re-ask, visual)",
+      "assertionMode": "visual",
+      "exitCode": 0,
+      "durationMs": 30865,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 6.53,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"‎RadioSEM: Global FM Radio App -\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: '\\u200eRadioSEM: Global FM Radio App - App Store' -> '\\u200eRadioSEM: Global FM Radio App - App Store'; contains '\\u200eRadioSEM: Global FM Radio App -' -> PASS",
+          "kaneCheck": {
+            "extracted": "‎RadioSEM: Global FM Radio App - App Store",
+            "operator": "contains",
+            "expected": "‎RadioSEM: Global FM Radio App -"
+          }
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Velvet Global FM Radio App -\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: '\\u200eRadioSEM: Global FM Radio App - App Store' -> '\\u200eRadioSEM: Global FM Radio App - App Store'; contains 'Velvet Global FM Radio App -' -> FAIL",
+          "kaneCheck": {
+            "extracted": "‎RadioSEM: Global FM Radio App - App Store",
+            "operator": "contains",
+            "expected": "Velvet Global FM Radio App -"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 0,
+          "text": "The app name shown on this store listing is \"RadioSEM\" (ignoring letter case and punctuation). Read the whole listing, including the details and information sections further down the page. Your earlier reading was: \"Reading the app name from the store listing: value: 'RadioSEM' -> 'radiosem' after ['lowercase']; equals 'radiosem' -> PASS\"",
+          "answer": false,
+          "reason": "Reading the normalized app name from the store listing: value: 'radiosemglobalfmradio' -> 'radiosemglobalfmradio'; equals 'radiosem' -> FAIL",
+          "kaneCheck": {
+            "extracted": "radiosemglobalfmradio",
+            "operator": "equals",
+            "expected": "radiosem"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 0,
+          "text": "The app name shown on this store listing is clearly a different app than \"RadioSEM\". Read the whole listing, including the details and information sections further down the page. Your earlier reading was: \"Reading the app name from the store listing: value: 'RadioSEM: Global FM Radio' -> 'radiosem: global fm radio' after ['lowercase']; not_equals 'radiosem' -> PAS\"",
+          "answer": true,
+          "reason": "Reading the app name from the store listing: value: 'RadioSEM: Global FM Radio' -> 'radiosem: global fm radio' after ['lowercase']; not_equals 'radiosem' -> PASS",
+          "kaneCheck": {
+            "extracted": "RadioSEM: Global FM Radio",
+            "operator": "not_equals",
+            "expected": "radiosem"
+          }
+        }
+      ],
+      "stderrTail": [
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "https://apps.apple.com/us/app/radiosem-global-fm-radio/id6806462026",
+      "title": "‎RadioSEM: Global FM Radio App - App Store"
+    }
+  ],
+  "rows": [
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.radiosem",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.radiosem",
+      "claimType": "listing-name",
+      "statement": "the store link opens the listing for \"RadioSEM\"",
+      "sourceQuote": "RadioSEM",
+      "verdict": "PROVED",
+      "why": "Reading the app name from the store listing: value: 'radiosem' -> 'radiosem' after ['lowercase']; equals 'RadioSEM' -> 'radiosem' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.radiosem",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.radiosem",
+      "claimType": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free with ads, and an optional monthly Premium subscription removes them.",
+      "verdict": "PROVED",
+      "why": "Checking the app installation action: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.radiosem",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.radiosem",
+      "claimType": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "In-app purchases",
+      "verdict": "PROVED",
+      "why": "Checking for the in-app purchases disclosure: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.radiosem",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.radiosem",
+      "claimType": "contains-ads",
+      "statement": "the app contains ads",
+      "sourceQuote": "It is free with ads, and an optional monthly Premium subscription removes them.",
+      "verdict": "PROVED",
+      "why": "Checking for the ads disclosure: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "App Store",
+      "targetUrl": "https://apps.apple.com/us/app/radiosem-global-fm-radio/id6806462026",
+      "finalUrl": "https://apps.apple.com/us/app/radiosem-global-fm-radio/id6806462026",
+      "claimType": "listing-name",
+      "statement": "the store link opens the listing for \"RadioSEM\"",
+      "sourceQuote": "RadioSEM",
+      "verdict": "REFUTED",
+      "why": "Reading the normalized app name from the store listing: value: 'radiosemglobalfmradio' -> 'radiosemglobalfmradio'; equals 'radiosem' -> FAIL",
+      "kane": {
+        "p": false,
+        "notP": true
+      },
+      "reasked": true,
+      "diagnosis": null
+    },
+    {
+      "store": "App Store",
+      "targetUrl": "https://apps.apple.com/us/app/radiosem-global-fm-radio/id6806462026",
+      "finalUrl": "https://apps.apple.com/us/app/radiosem-global-fm-radio/id6806462026",
+      "claimType": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free with ads, and an optional monthly Premium subscription removes them.",
+      "verdict": "PROVED",
+      "why": "Checking the listing installation price: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "App Store",
+      "targetUrl": "https://apps.apple.com/us/app/radiosem-global-fm-radio/id6806462026",
+      "finalUrl": "https://apps.apple.com/us/app/radiosem-global-fm-radio/id6806462026",
+      "claimType": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "In-app purchases",
+      "verdict": "PROVED",
+      "why": "Checking the listing for in-app purchases: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    }
+  ],
+  "sourceRows": [
+    {
+      "claimType": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free with ads, and an optional monthly Premium subscription removes them.",
+      "verdict": "PROVED",
+      "why": "Checking the app's free listing: value: 'true' -> 'true'; equals 'true' -> PASS"
+    },
+    {
+      "claimType": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "In-app purchases",
+      "verdict": "PROVED",
+      "why": "Checking the app's in-app-purchases listing: value: 'true' -> 'true'; equals 'true' -> PASS"
+    },
+    {
+      "claimType": "contains-ads",
+      "statement": "the app contains ads",
+      "sourceQuote": "It is free with ads, and an optional monthly Premium subscription removes them.",
+      "verdict": "PROVED",
+      "why": "Checking the app's ads listing: value: 'true' -> 'true'; equals 'true' -> PASS"
+    }
+  ],
+  "notes": [],
+  "finalUrl": "https://ruicodex.com/Products/radiosem",
+  "title": "RadioSEM: Live Global FM Radio for Android and iPhone",
+  "productName": "RadioSEM",
+  "claims": [
+    {
+      "type": "listing-name",
+      "statement": "the store link opens the listing for \"RadioSEM\"",
+      "sourceQuote": "RadioSEM",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "The app name shown on this store listing is \"RadioSEM\" (ignoring letter case and punctuation)",
+      "notP": "The app name shown on this store listing is clearly a different app than \"RadioSEM\""
+    },
+    {
+      "type": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free with ads, and an optional monthly Premium subscription removes them.",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "This store listing shows that the app is free to install",
+      "notP": "This store listing shows a purchase price that must be paid before the app can be installed"
+    },
+    {
+      "type": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "In-app purchases",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "This store listing states that the app offers in-app purchases",
+      "notP": "This store listing gives no indication anywhere that the app offers in-app purchases"
+    },
+    {
+      "type": "contains-ads",
+      "statement": "the app contains ads",
+      "sourceQuote": "It is free with ads, and an optional monthly Premium subscription removes them.",
+      "appliesTo": [
+        "play",
+        "fixture"
+      ],
+      "p": "This store listing states that the app contains ads",
+      "notP": "This store listing gives no indication anywhere that the app contains ads"
+    }
+  ],
+  "targets": [
+    {
+      "kind": "play",
+      "label": "Google Play",
+      "key": "play:com.ruicodex.radiosem",
+      "url": "https://play.google.com/store/apps/details?id=com.ruicodex.radiosem",
+      "linkText": "GET IT ON Google Play (opens in a new tab)"
+    },
+    {
+      "kind": "appstore",
+      "label": "App Store",
+      "key": "appstore:6806462026",
+      "url": "https://apps.apple.com/us/app/radiosem-global-fm-radio/id6806462026",
+      "linkText": "DOWNLOAD ON THE App Store (opens in a new tab)"
+    }
+  ],
+  "credits": 24.82,
+  "summary": {
+    "total": 7,
+    "PROVED": 6,
+    "REFUTED": 1,
+    "INCONCLUSIVE": 0,
+    "UNTRUSTED": 0,
+    "ABSENT": 0
+  },
+  "exitCode": 1,
+  "files": {
+    "json": "runs\\2026-11-12T13-42-17-258Z_ruicodex-com-Products-radiosem.json",
+    "md": "runs\\2026-11-12T13-42-17-258Z_ruicodex-com-Products-radiosem.md"
+  }
+}

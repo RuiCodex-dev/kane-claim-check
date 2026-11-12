@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claim Check</title>
+<link rel="stylesheet" href="/ui/style.css">
+</head>
+<body>
+<header>
+  <h1>Claim Check</h1>
+  <p class="tag">Every promise a page makes about its store listings, proved where the link actually leads. Judged by Kane CLI in a real browser, with a known-false control in every run.</p>
+</header>
+<main>
+  <section class="card">
+    <form id="form">
+      <label for="url">Page to check</label>
+      <div class="row">
+        <input id="url" name="url" type="url" placeholder="https://example.com/your-app" required>
+        <button id="run" type="submit">Check page</button>
+      </div>
+      <p class="hint">Or <button id="demo" type="button" class="link">try the demo fixture</button>: a local landing page whose store listing quietly disagrees with it.</p>
+    </form>
+    <div id="progress" hidden>
+      <ol class="steps">
+        <li data-step="read">Read the page</li>
+        <li data-step="source">Kane confirms the page says it</li>
+        <li data-step="follow">Follow each store link</li>
+        <li data-step="judge">Kane judges claim and negation</li>
+        <li data-step="ledger">Ledger</li>
+      </ol>
+      <p class="meta"><span id="elapsed">0:00</span> elapsed. An analyzer run takes 30-80 s per page.</p>
+    </div>
+    <ol id="log" aria-live="polite"></ol>
+  </section>
+
+  <section class="card" id="ledger-card" hidden>
+    <h2 id="ledger-title">Ledger</h2>
+    <p id="ledger-meta" class="meta"></p>
+    <div id="summary" class="chips"></div>
+    <p class="legend">PROVED = Kane said the claim is true <em>and</em> its negation is false. REFUTED = the reverse. Anything else is INCONCLUSIVE and never green.</p>
+    <div class="scroll">
+      <table id="ledger">
+        <thead><tr><th>Verdict</th><th>Store</th><th>Claim on the page</th><th>What Kane said</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <h3>Trust gates</h3>
+    <p class="meta">Each Kane run must say TRUE to a statement Claim Check knows is true, and FALSE to a near-miss it knows is false. Otherwise none of that run's answers count.</p>
+    <div class="scroll">
+      <table id="gates">
+        <thead><tr><th>Kane run</th><th>Trust</th><th>Known-true gate</th><th>Known-false control</th><th>Credits</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div id="notes"></div>
+  </section>
+
+  <section class="card">
+    <h2>Previous checks</h2>
+    <ul id="runs"><li class="meta">Loading...</li></ul>
+  </section>
+</main>
+<footer>kane-claim-check. Kane CLI is a product of TestMu AI; this tool calls it and is not affiliated with it.</footer>
+<script src="/ui/app.js"></script>
+</body>
+</html>

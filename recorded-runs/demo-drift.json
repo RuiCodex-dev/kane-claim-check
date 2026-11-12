@@ -1,0 +1,359 @@
+{
+  "tool": "kane-claim-check",
+  "version": "0.1.0",
+  "checkedAt": "2026-11-12T07:46:14.101Z",
+  "url": "http://127.0.0.1:65111/fixtures/drift/",
+  "batches": [
+    {
+      "label": "source page",
+      "exitCode": 0,
+      "durationMs": 43943,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 5.93226,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"Night Owl Notes | a fictional\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: 'Night Owl Notes | a fictional demo app' -> 'Night Owl Notes | a fictional demo app'; contains 'Night Owl Notes | a fictional' -> PASS"
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Night Owl Notes | a Velvet\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: 'Night Owl Notes | a fictional demo app' -> 'Night Owl Notes | a fictional demo app'; contains 'Night Owl Notes | a Velvet' -> FAIL"
+        },
+        {
+          "role": "source",
+          "claim": 1,
+          "text": "This page states that the app is free to download",
+          "answer": true,
+          "reason": "Reading the app download availability statement: value: 'Night Owl Notes is a dark-mode notebook for late-night writers. It is free to download. No ads, no in-app purchases.' -> 'night owl notes is a dark-mode notebook for late-night writers. it is free to download. no ads, no in-app purchases.' after ['lowercase']; contains 'free to download' -> PASS"
+        },
+        {
+          "role": "source",
+          "claim": 2,
+          "text": "This page states that the app has no in-app purchases",
+          "answer": true,
+          "reason": "Reading the app in-app purchase statement: value: 'Night Owl Notes is a dark-mode notebook for late-night writers. It is free to download. No ads, no in-app purchases.' -> 'night owl notes is a dark-mode notebook for late-night writers. it is free to download. no ads, no in-app purchases.' after ['lowercase']; contains 'no in-app purchases' -> PASS"
+        },
+        {
+          "role": "source",
+          "claim": 3,
+          "text": "This page states that the app has no ads",
+          "answer": true,
+          "reason": "Reading the app advertising statement: value: 'Night Owl Notes is a dark-mode notebook for late-night writers. It is free to download. No ads, no in-app purchases.' -> 'night owl notes is a dark-mode notebook for late-night writers. it is free to download. no ads, no in-app purchases.' after ['lowercase']; contains 'no ads' -> PASS"
+        },
+        {
+          "role": "source",
+          "claim": 4,
+          "text": "This page states that the content rating is PEGI 3",
+          "answer": true,
+          "reason": "Reading the app content rating: value: 'Content rating: PEGI 3' -> 'Content rating: PEGI 3'; contains 'PEGI 3' -> PASS"
+        }
+      ],
+      "stderrTail": [
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "http://127.0.0.1:65111/fixtures/drift/",
+      "title": "Night Owl Notes | a fictional demo app"
+    },
+    {
+      "label": "fixture store",
+      "exitCode": 0,
+      "durationMs": 46364,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 7.457629999999999,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"Night Owl Notes - Apps on\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: 'Night Owl Notes - Apps on the Fixture Store' -> 'Night Owl Notes - Apps on the Fixture Store'; contains 'Night Owl Notes - Apps on' -> PASS"
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Velvet Owl Notes - Apps on\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: 'Night Owl Notes - Apps on the Fixture Store' -> 'Night Owl Notes - Apps on the Fixture Store'; contains 'Velvet Owl Notes - Apps on' -> FAIL"
+        },
+        {
+          "role": "p",
+          "claim": 0,
+          "text": "The app name shown on this store listing is \"Night Owl Notes\" (ignoring letter case and punctuation)",
+          "answer": true,
+          "reason": "Reading the app name from the store listing: value: 'Night Owl Notes' -> 'night owl notes' after ['strip', 'lowercase']; equals 'night owl notes' -> PASS"
+        },
+        {
+          "role": "notP",
+          "claim": 0,
+          "text": "The app name shown on this store listing is clearly a different app than \"Night Owl Notes\"",
+          "answer": false,
+          "reason": "Checking whether the listed app name differs from the specified app: value: 'false' -> 'false'; equals 'true' -> FAIL"
+        },
+        {
+          "role": "p",
+          "claim": 1,
+          "text": "This store listing shows that the app is free to install: there is no purchase price to pay before installing it",
+          "answer": false,
+          "reason": "Checking whether installation has no purchase price: value: 'false' -> 'false'; equals 'true' -> FAIL"
+        },
+        {
+          "role": "notP",
+          "claim": 1,
+          "text": "This store listing shows a purchase price that must be paid before the app can be installed",
+          "answer": true,
+          "reason": "Checking whether a purchase price is displayed: value: 'true' -> 'true'; equals 'true' -> PASS"
+        },
+        {
+          "role": "p",
+          "claim": 2,
+          "text": "This store listing gives no indication anywhere that the app offers in-app purchases",
+          "answer": false,
+          "reason": "Checking whether in-app purchases are absent: value: 'false' -> 'false'; equals 'true' -> FAIL"
+        },
+        {
+          "role": "notP",
+          "claim": 2,
+          "text": "This store listing states that the app offers in-app purchases",
+          "answer": true,
+          "reason": "Checking whether in-app purchases are listed: value: 'true' -> 'true'; equals 'true' -> PASS"
+        },
+        {
+          "role": "p",
+          "claim": 3,
+          "text": "This store listing gives no indication anywhere that the app contains ads",
+          "answer": false,
+          "reason": "Checking whether ads are absent: value: 'false' -> 'false'; equals 'true' -> FAIL"
+        },
+        {
+          "role": "notP",
+          "claim": 3,
+          "text": "This store listing states that the app contains ads",
+          "answer": true,
+          "reason": "Checking whether ads are listed: value: 'true' -> 'true'; equals 'true' -> PASS"
+        },
+        {
+          "role": "p",
+          "claim": 4,
+          "text": "This store listing shows the content rating PEGI 3",
+          "answer": false,
+          "reason": "Checking the content rating in the store listing: value: 'false' -> 'false'; equals 'true' -> FAIL"
+        },
+        {
+          "role": "notP",
+          "claim": 4,
+          "text": "This store listing shows a content rating that is not PEGI 3",
+          "answer": true,
+          "reason": "Checking whether the content rating differs from PEGI 3: value: 'true' -> 'true'; equals 'true' -> PASS"
+        }
+      ],
+      "stderrTail": [
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "http://127.0.0.1:65111/fixtures/store/night-owl-notes/",
+      "title": "Night Owl Notes - Apps on the Fixture Store"
+    }
+  ],
+  "rows": [
+    {
+      "store": "fixture store",
+      "targetUrl": "http://127.0.0.1:65111/fixtures/store/night-owl-notes/",
+      "finalUrl": "http://127.0.0.1:65111/fixtures/store/night-owl-notes/",
+      "claimType": "listing-name",
+      "statement": "the store link opens the listing for \"Night Owl Notes\"",
+      "sourceQuote": "Night Owl Notes",
+      "verdict": "PROVED",
+      "why": "Reading the app name from the store listing: value: 'Night Owl Notes' -> 'night owl notes' after ['strip', 'lowercase']; equals 'night owl notes' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false
+    },
+    {
+      "store": "fixture store",
+      "targetUrl": "http://127.0.0.1:65111/fixtures/store/night-owl-notes/",
+      "finalUrl": "http://127.0.0.1:65111/fixtures/store/night-owl-notes/",
+      "claimType": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free to download.",
+      "verdict": "REFUTED",
+      "why": "Checking whether installation has no purchase price: value: 'false' -> 'false'; equals 'true' -> FAIL",
+      "kane": {
+        "p": false,
+        "notP": true
+      },
+      "reasked": false
+    },
+    {
+      "store": "fixture store",
+      "targetUrl": "http://127.0.0.1:65111/fixtures/store/night-owl-notes/",
+      "finalUrl": "http://127.0.0.1:65111/fixtures/store/night-owl-notes/",
+      "claimType": "no-in-app-purchases",
+      "statement": "the app has no in-app purchases",
+      "sourceQuote": "No ads, no in-app purchases.",
+      "verdict": "REFUTED",
+      "why": "Checking whether in-app purchases are absent: value: 'false' -> 'false'; equals 'true' -> FAIL",
+      "kane": {
+        "p": false,
+        "notP": true
+      },
+      "reasked": false
+    },
+    {
+      "store": "fixture store",
+      "targetUrl": "http://127.0.0.1:65111/fixtures/store/night-owl-notes/",
+      "finalUrl": "http://127.0.0.1:65111/fixtures/store/night-owl-notes/",
+      "claimType": "no-ads",
+      "statement": "the app has no ads",
+      "sourceQuote": "No ads, no in-app purchases.",
+      "verdict": "REFUTED",
+      "why": "Checking whether ads are absent: value: 'false' -> 'false'; equals 'true' -> FAIL",
+      "kane": {
+        "p": false,
+        "notP": true
+      },
+      "reasked": false
+    },
+    {
+      "store": "fixture store",
+      "targetUrl": "http://127.0.0.1:65111/fixtures/store/night-owl-notes/",
+      "finalUrl": "http://127.0.0.1:65111/fixtures/store/night-owl-notes/",
+      "claimType": "content-rating",
+      "statement": "the content rating is PEGI 3",
+      "sourceQuote": "Content rating: PEGI 3",
+      "verdict": "REFUTED",
+      "why": "Checking the content rating in the store listing: value: 'false' -> 'false'; equals 'true' -> FAIL",
+      "kane": {
+        "p": false,
+        "notP": true
+      },
+      "reasked": false
+    }
+  ],
+  "sourceRows": [
+    {
+      "claimType": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free to download.",
+      "verdict": "PROVED",
+      "why": "Reading the app download availability statement: value: 'Night Owl Notes is a dark-mode notebook for late-night writers. It is free to download. No ads, no in-app purchases.' -> 'night owl notes is a dark-mode notebook for late-night writers. it is free to download. no ads, no in-app purchases.' after ['lowercase']; contains 'free to download' -> PASS"
+    },
+    {
+      "claimType": "no-in-app-purchases",
+      "statement": "the app has no in-app purchases",
+      "sourceQuote": "No ads, no in-app purchases.",
+      "verdict": "PROVED",
+      "why": "Reading the app in-app purchase statement: value: 'Night Owl Notes is a dark-mode notebook for late-night writers. It is free to download. No ads, no in-app purchases.' -> 'night owl notes is a dark-mode notebook for late-night writers. it is free to download. no ads, no in-app purchases.' after ['lowercase']; contains 'no in-app purchases' -> PASS"
+    },
+    {
+      "claimType": "no-ads",
+      "statement": "the app has no ads",
+      "sourceQuote": "No ads, no in-app purchases.",
+      "verdict": "PROVED",
+      "why": "Reading the app advertising statement: value: 'Night Owl Notes is a dark-mode notebook for late-night writers. It is free to download. No ads, no in-app purchases.' -> 'night owl notes is a dark-mode notebook for late-night writers. it is free to download. no ads, no in-app purchases.' after ['lowercase']; contains 'no ads' -> PASS"
+    },
+    {
+      "claimType": "content-rating",
+      "statement": "the content rating is PEGI 3",
+      "sourceQuote": "Content rating: PEGI 3",
+      "verdict": "PROVED",
+      "why": "Reading the app content rating: value: 'Content rating: PEGI 3' -> 'Content rating: PEGI 3'; contains 'PEGI 3' -> PASS"
+    }
+  ],
+  "notes": [],
+  "finalUrl": "http://127.0.0.1:65111/fixtures/drift/",
+  "title": "Night Owl Notes | a fictional demo app",
+  "productName": "Night Owl Notes",
+  "claims": [
+    {
+      "type": "listing-name",
+      "statement": "the store link opens the listing for \"Night Owl Notes\"",
+      "sourceQuote": "Night Owl Notes",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "The app name shown on this store listing is \"Night Owl Notes\" (ignoring letter case and punctuation)",
+      "notP": "The app name shown on this store listing is clearly a different app than \"Night Owl Notes\""
+    },
+    {
+      "type": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free to download.",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "This store listing shows that the app is free to install: there is no purchase price to pay before installing it",
+      "notP": "This store listing shows a purchase price that must be paid before the app can be installed"
+    },
+    {
+      "type": "no-in-app-purchases",
+      "statement": "the app has no in-app purchases",
+      "sourceQuote": "No ads, no in-app purchases.",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "This store listing gives no indication anywhere that the app offers in-app purchases",
+      "notP": "This store listing states that the app offers in-app purchases"
+    },
+    {
+      "type": "no-ads",
+      "statement": "the app has no ads",
+      "sourceQuote": "No ads, no in-app purchases.",
+      "appliesTo": [
+        "play",
+        "fixture"
+      ],
+      "p": "This store listing gives no indication anywhere that the app contains ads",
+      "notP": "This store listing states that the app contains ads"
+    },
+    {
+      "type": "content-rating",
+      "statement": "the content rating is PEGI 3",
+      "sourceQuote": "Content rating: PEGI 3",
+      "appliesTo": [
+        "play",
+        "fixture"
+      ],
+      "p": "This store listing shows the content rating PEGI 3",
+      "notP": "This store listing shows a content rating that is not PEGI 3"
+    }
+  ],
+  "targets": [
+    {
+      "kind": "fixture",
+      "label": "fixture store",
+      "key": "fixture:/fixtures/store/night-owl-notes/",
+      "url": "http://127.0.0.1:65111/fixtures/store/night-owl-notes/",
+      "linkText": "Get it on the fixture store"
+    }
+  ],
+  "credits": 13.39,
+  "summary": {
+    "total": 5,
+    "PROVED": 1,
+    "REFUTED": 4,
+    "INCONCLUSIVE": 0,
+    "UNTRUSTED": 0,
+    "ABSENT": 0
+  },
+  "exitCode": 1,
+  "files": {
+    "json": "runs\\2026-11-12T07-46-14-101Z_127-0-0-1-65111-fixtures-drift.json",
+    "md": "runs\\2026-11-12T07-46-14-101Z_127-0-0-1-65111-fixtures-drift.md"
+  }
+}

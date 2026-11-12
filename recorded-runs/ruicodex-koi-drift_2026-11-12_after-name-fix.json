@@ -1,0 +1,525 @@
+{
+  "tool": "kane-claim-check",
+  "version": "0.1.0",
+  "checkedAt": "2026-11-12T13:55:23.390Z",
+  "url": "https://ruicodex.com/Products/koi-drift",
+  "batches": [
+    {
+      "label": "source page",
+      "assertionMode": "dom",
+      "exitCode": 0,
+      "durationMs": 21515,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 1.84,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"Koi Drift: Zen Koi Puzzle Game\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: 'Koi Drift: Zen Koi Puzzle Game for Android | Rui Codex' -> 'Koi Drift: Zen Koi Puzzle Game for Android | Rui Codex'; contains 'Koi Drift: Zen Koi Puzzle Game' -> PASS",
+          "kaneCheck": {
+            "extracted": "Koi Drift: Zen Koi Puzzle Game for Android | Rui Codex",
+            "operator": "contains",
+            "expected": "Koi Drift: Zen Koi Puzzle Game"
+          }
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Koi Velvet Zen Koi Puzzle Game\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: 'Koi Drift: Zen Koi Puzzle Game for Android | Rui Codex' -> 'Koi Drift: Zen Koi Puzzle Game for Android | Rui Codex'; contains 'Koi Velvet Zen Koi Puzzle Game' -> FAIL",
+          "kaneCheck": {
+            "extracted": "Koi Drift: Zen Koi Puzzle Game for Android | Rui Codex",
+            "operator": "contains",
+            "expected": "Koi Velvet Zen Koi Puzzle Game"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 1,
+          "text": "This page states that the app is free to download",
+          "answer": true,
+          "reason": "Reading the app download price from Key facts: value: 'Free' -> 'free' after ['strip', 'lowercase']; equals 'free' -> PASS",
+          "kaneCheck": {
+            "extracted": "Free",
+            "operator": "equals",
+            "expected": "free"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 2,
+          "text": "This page states that the app offers in-app purchases",
+          "answer": true,
+          "reason": "Reading the app purchase availability from Key facts: value: 'In-app purchases' -> 'in-app purchases' after ['strip', 'lowercase']; equals 'in-app purchases' -> PASS",
+          "kaneCheck": {
+            "extracted": "In-app purchases",
+            "operator": "equals",
+            "expected": "in-app purchases"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 3,
+          "text": "This page states that the app contains ads",
+          "answer": true,
+          "reason": "Reading the app advertising statement from Key facts: value: 'Contains ads' -> 'contains ads' after ['strip', 'lowercase']; equals 'contains ads' -> PASS",
+          "kaneCheck": {
+            "extracted": "Contains ads",
+            "operator": "equals",
+            "expected": "contains ads"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 4,
+          "text": "This page states that the content rating is PEGI 3",
+          "answer": true,
+          "reason": "Reading the app content rating from Key facts: value: 'Content rating: PEGI 3' -> 'content rating: pegi 3' after ['strip', 'lowercase']; equals 'content rating: pegi 3' -> PASS",
+          "kaneCheck": {
+            "extracted": "Content rating: PEGI 3",
+            "operator": "equals",
+            "expected": "content rating: pegi 3"
+          }
+        }
+      ],
+      "stderrTail": [
+        "(node:74064) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.",
+        "(Use `node --trace-warnings ...` to show where the warning was created)",
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "https://ruicodex.com/Products/koi-drift",
+      "title": "Koi Drift: Zen Koi Puzzle Game for Android | Rui Codex"
+    },
+    {
+      "label": "Google Play",
+      "assertionMode": "dom",
+      "exitCode": 0,
+      "durationMs": 36756,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 8.26,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"Koi Drift: Zen Koi Puzzle -\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: 'Koi Drift: Zen Koi Puzzle - Apps on Google Play' -> 'Koi Drift: Zen Koi Puzzle - Apps on Google Play'; contains 'Koi Drift: Zen Koi Puzzle -' -> PASS",
+          "kaneCheck": {
+            "extracted": "Koi Drift: Zen Koi Puzzle - Apps on Google Play",
+            "operator": "contains",
+            "expected": "Koi Drift: Zen Koi Puzzle -"
+          }
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Koi Velvet Zen Koi Puzzle -\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: 'Koi Drift: Zen Koi Puzzle - Apps on Google Play' -> 'Koi Drift: Zen Koi Puzzle - Apps on Google Play'; contains 'Koi Velvet Zen Koi Puzzle -' -> FAIL",
+          "kaneCheck": {
+            "extracted": "Koi Drift: Zen Koi Puzzle - Apps on Google Play",
+            "operator": "contains",
+            "expected": "Koi Velvet Zen Koi Puzzle -"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 0,
+          "text": "The app name shown on this store listing begins with \"Koi Drift\" (ignoring letter case and punctuation; a subtitle after it is allowed)",
+          "answer": true,
+          "reason": "Reading the app name from the store listing: value: 'Koi Drift: Zen Koi Puzzle' -> 'koi drift: zen koi puzzle' after ['lowercase']; contains 'koi drift' -> PASS",
+          "kaneCheck": {
+            "extracted": "Koi Drift: Zen Koi Puzzle",
+            "operator": "contains",
+            "expected": "koi drift"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 0,
+          "text": "The app name shown on this store listing is clearly a different app than \"Koi Drift\"",
+          "answer": false,
+          "reason": "Reading the app name from the store listing: value: 'Koi Drift: Zen Koi Puzzle' -> 'koi drift: zen koi puzzle' after ['lowercase']; not_contains 'koi drift' -> FAIL",
+          "kaneCheck": {
+            "extracted": "Koi Drift: Zen Koi Puzzle",
+            "operator": "not_contains",
+            "expected": "koi drift"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 1,
+          "text": "This store listing shows that the app is free to install",
+          "answer": true,
+          "reason": "Checking the installation offer on the store listing: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 1,
+          "text": "This store listing shows a purchase price that must be paid before the app can be installed",
+          "answer": false,
+          "reason": "Reading the purchase control on the store listing: value: 'Install' -> 'Install'; not_equals 'Install' -> FAIL",
+          "kaneCheck": {
+            "extracted": "Install",
+            "operator": "not_equals",
+            "expected": "Install"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 2,
+          "text": "This store listing states that the app offers in-app purchases",
+          "answer": true,
+          "reason": "Checking the in-app purchases disclosure: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 2,
+          "text": "This store listing gives no indication anywhere that the app offers in-app purchases",
+          "answer": false,
+          "reason": "Checking the in-app purchases disclosure: value: 'true' -> 'true'; equals 'false' -> FAIL",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "false"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 3,
+          "text": "This store listing states that the app contains ads",
+          "answer": true,
+          "reason": "Checking the ads disclosure: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 3,
+          "text": "This store listing gives no indication anywhere that the app contains ads",
+          "answer": false,
+          "reason": "Checking the ads disclosure: value: 'true' -> 'true'; equals 'false' -> FAIL",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "false"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 4,
+          "text": "This store listing shows the content rating PEGI 3",
+          "answer": true,
+          "reason": "Checking the content rating on the store listing: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 4,
+          "text": "This store listing shows a content rating that is not PEGI 3",
+          "answer": true,
+          "reason": "Checking the content rating on the store listing: value: 'false' -> 'false'; equals 'false' -> PASS",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "false"
+          }
+        }
+      ],
+      "stderrTail": [
+        "(node:59300) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.",
+        "(Use `node --trace-warnings ...` to show where the warning was created)",
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.ruicodex.koidrift",
+      "title": "Koi Drift: Zen Koi Puzzle - Apps on Google Play"
+    },
+    {
+      "label": "Google Play (re-ask, visual)",
+      "assertionMode": "visual",
+      "exitCode": 0,
+      "durationMs": 24227,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 5.93,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"Koi Drift: Zen Koi Puzzle -\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: 'Koi Drift: Zen Koi Puzzle - Apps on Google Play' -> 'Koi Drift: Zen Koi Puzzle - Apps on Google Play'; contains 'Koi Drift: Zen Koi Puzzle -' -> PASS",
+          "kaneCheck": {
+            "extracted": "Koi Drift: Zen Koi Puzzle - Apps on Google Play",
+            "operator": "contains",
+            "expected": "Koi Drift: Zen Koi Puzzle -"
+          }
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Koi Velvet Zen Koi Puzzle -\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: 'Koi Drift: Zen Koi Puzzle - Apps on Google Play' -> 'Koi Drift: Zen Koi Puzzle - Apps on Google Play'; contains 'Koi Velvet Zen Koi Puzzle -' -> FAIL",
+          "kaneCheck": {
+            "extracted": "Koi Drift: Zen Koi Puzzle - Apps on Google Play",
+            "operator": "contains",
+            "expected": "Koi Velvet Zen Koi Puzzle -"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 4,
+          "text": "This store listing shows the content rating PEGI 3. Read the whole listing, including the details and information sections further down the page. Your earlier reading was: \"Checking the content rating on the store listing: value: 'true' -> 'true'; equals 'true' -> PASS\"",
+          "answer": true,
+          "reason": "Checking the content rating displayed on the store listing: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 4,
+          "text": "This store listing shows a content rating that is not PEGI 3. Read the whole listing, including the details and information sections further down the page. Your earlier reading was: \"Checking the content rating on the store listing: value: 'false' -> 'false'; equals 'false' -> PASS\"",
+          "answer": true,
+          "reason": "Checking the content rating displayed on the store listing: value: 'false' -> 'false'; equals 'false' -> PASS",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "false"
+          }
+        }
+      ],
+      "stderrTail": [
+        "(node:75100) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.",
+        "(Use `node --trace-warnings ...` to show where the warning was created)",
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.ruicodex.koidrift",
+      "title": "Koi Drift: Zen Koi Puzzle - Apps on Google Play"
+    }
+  ],
+  "rows": [
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.koidrift",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.koidrift",
+      "claimType": "listing-name",
+      "statement": "the store link opens the listing for \"Koi Drift\"",
+      "sourceQuote": "Koi Drift",
+      "verdict": "PROVED",
+      "why": "Reading the app name from the store listing: value: 'Koi Drift: Zen Koi Puzzle' -> 'koi drift: zen koi puzzle' after ['lowercase']; contains 'koi drift' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.koidrift",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.koidrift",
+      "claimType": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "There are no timers or lives, it plays offline, and it is free with optional purchases.",
+      "verdict": "PROVED",
+      "why": "Checking the installation offer on the store listing: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.koidrift",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.koidrift",
+      "claimType": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "In-app purchases",
+      "verdict": "PROVED",
+      "why": "Checking the in-app purchases disclosure: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.koidrift",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.koidrift",
+      "claimType": "contains-ads",
+      "statement": "the app contains ads",
+      "sourceQuote": "Contains ads",
+      "verdict": "PROVED",
+      "why": "Checking the ads disclosure: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.koidrift",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.koidrift",
+      "claimType": "content-rating",
+      "statement": "the content rating is PEGI 3",
+      "sourceQuote": "Content rating: PEGI 3",
+      "verdict": "INCONCLUSIVE",
+      "why": "Kane answered true to the claim and true to its negation",
+      "kane": {
+        "p": true,
+        "notP": true
+      },
+      "reasked": true,
+      "diagnosis": "Kane compiled the negation \"This store listing shows a content rating that is not PEGI 3\" into a check that expects \"false\" and read \"false\", so it answered true to both the claim and its negation (an inverted question)."
+    }
+  ],
+  "sourceRows": [
+    {
+      "claimType": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "There are no timers or lives, it plays offline, and it is free with optional purchases.",
+      "verdict": "PROVED",
+      "why": "Reading the app download price from Key facts: value: 'Free' -> 'free' after ['strip', 'lowercase']; equals 'free' -> PASS"
+    },
+    {
+      "claimType": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "In-app purchases",
+      "verdict": "PROVED",
+      "why": "Reading the app purchase availability from Key facts: value: 'In-app purchases' -> 'in-app purchases' after ['strip', 'lowercase']; equals 'in-app purchases' -> PASS"
+    },
+    {
+      "claimType": "contains-ads",
+      "statement": "the app contains ads",
+      "sourceQuote": "Contains ads",
+      "verdict": "PROVED",
+      "why": "Reading the app advertising statement from Key facts: value: 'Contains ads' -> 'contains ads' after ['strip', 'lowercase']; equals 'contains ads' -> PASS"
+    },
+    {
+      "claimType": "content-rating",
+      "statement": "the content rating is PEGI 3",
+      "sourceQuote": "Content rating: PEGI 3",
+      "verdict": "PROVED",
+      "why": "Reading the app content rating from Key facts: value: 'Content rating: PEGI 3' -> 'content rating: pegi 3' after ['strip', 'lowercase']; equals 'content rating: pegi 3' -> PASS"
+    }
+  ],
+  "notes": [],
+  "finalUrl": "https://ruicodex.com/Products/koi-drift",
+  "title": "Koi Drift: Zen Koi Puzzle Game for Android | Rui Codex",
+  "productName": "Koi Drift",
+  "claims": [
+    {
+      "type": "listing-name",
+      "statement": "the store link opens the listing for \"Koi Drift\"",
+      "sourceQuote": "Koi Drift",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "The app name shown on this store listing begins with \"Koi Drift\" (ignoring letter case and punctuation; a subtitle after it is allowed)",
+      "notP": "The app name shown on this store listing is clearly a different app than \"Koi Drift\""
+    },
+    {
+      "type": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "There are no timers or lives, it plays offline, and it is free with optional purchases.",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "This store listing shows that the app is free to install",
+      "notP": "This store listing shows a purchase price that must be paid before the app can be installed"
+    },
+    {
+      "type": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "In-app purchases",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "This store listing states that the app offers in-app purchases",
+      "notP": "This store listing gives no indication anywhere that the app offers in-app purchases"
+    },
+    {
+      "type": "contains-ads",
+      "statement": "the app contains ads",
+      "sourceQuote": "Contains ads",
+      "appliesTo": [
+        "play",
+        "fixture"
+      ],
+      "p": "This store listing states that the app contains ads",
+      "notP": "This store listing gives no indication anywhere that the app contains ads"
+    },
+    {
+      "type": "content-rating",
+      "statement": "the content rating is PEGI 3",
+      "sourceQuote": "Content rating: PEGI 3",
+      "appliesTo": [
+        "play",
+        "fixture"
+      ],
+      "p": "This store listing shows the content rating PEGI 3",
+      "notP": "This store listing shows a content rating that is not PEGI 3"
+    }
+  ],
+  "targets": [
+    {
+      "kind": "play",
+      "label": "Google Play",
+      "key": "play:com.ruicodex.koidrift",
+      "url": "https://play.google.com/store/apps/details?id=com.ruicodex.koidrift",
+      "linkText": "GET IT ON Google Play (opens in a new tab)"
+    }
+  ],
+  "credits": 16.03,
+  "summary": {
+    "total": 5,
+    "PROVED": 4,
+    "REFUTED": 0,
+    "INCONCLUSIVE": 1,
+    "UNTRUSTED": 0,
+    "ABSENT": 0
+  },
+  "exitCode": 2,
+  "files": {
+    "json": "runs\\2026-11-12T13-55-23-390Z_ruicodex-com-Products-koi-drift.json",
+    "md": "runs\\2026-11-12T13-55-23-390Z_ruicodex-com-Products-koi-drift.md"
+  }
+}

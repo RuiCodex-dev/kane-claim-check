@@ -1,0 +1,9 @@
+node_modules/
+runs/
+.testmuai/
+.claude/kane-gate-state.json
+.claude/settings.local.json
+kane/output-*/.internal/
+*.log
+.env
+.claude/gate-server.pid

@@ -1,0 +1,796 @@
+{
+  "tool": "kane-claim-check",
+  "version": "0.1.0",
+  "checkedAt": "2026-11-12T08:07:55.062Z",
+  "url": "https://ruicodex.com/Products/candy-chaos",
+  "batches": [
+    {
+      "label": "source page",
+      "assertionMode": "dom",
+      "exitCode": 0,
+      "durationMs": 35338,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 5.27,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"Candy Chaos: Sweet Sort, a Family\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: 'Candy Chaos: Sweet Sort, a Family Puzzle Game | Rui Codex' -> 'Candy Chaos: Sweet Sort, a Family Puzzle Game | Rui Codex'; contains 'Candy Chaos: Sweet Sort, a Family' -> PASS",
+          "kaneCheck": {
+            "extracted": "Candy Chaos: Sweet Sort, a Family Puzzle Game | Rui Codex",
+            "operator": "contains",
+            "expected": "Candy Chaos: Sweet Sort, a Family"
+          }
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Candy Velvet Sweet Sort, a Family\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: 'Candy Chaos: Sweet Sort, a Family Puzzle Game | Rui Codex' -> 'Candy Chaos: Sweet Sort, a Family Puzzle Game | Rui Codex'; contains 'Candy Velvet Sweet Sort, a Family' -> FAIL",
+          "kaneCheck": {
+            "extracted": "Candy Chaos: Sweet Sort, a Family Puzzle Game | Rui Codex",
+            "operator": "contains",
+            "expected": "Candy Velvet Sweet Sort, a Family"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 1,
+          "text": "This page states that the app is free to download",
+          "answer": true,
+          "reason": "Checking the app's free download status: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 2,
+          "text": "This page states that the app offers in-app purchases",
+          "answer": true,
+          "reason": "Checking the app's in-app purchases status: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 3,
+          "text": "This page states that the app contains ads",
+          "answer": true,
+          "reason": "Checking the app's advertising status: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "source",
+          "claim": 4,
+          "text": "This page states that the content rating is PEGI 3",
+          "answer": true,
+          "reason": "Checking the app's content rating: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        }
+      ],
+      "stderrTail": [
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "https://ruicodex.com/Products/candy-chaos",
+      "title": "Candy Chaos: Sweet Sort, a Family Puzzle Game | Rui Codex"
+    },
+    {
+      "label": "Google Play",
+      "assertionMode": "dom",
+      "exitCode": 0,
+      "durationMs": 45051,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 7.82,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"Candy Chaos - Sweet Sort -\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: 'Candy Chaos - Sweet Sort - Apps on Google Play' -> 'Candy Chaos - Sweet Sort - Apps on Google Play'; contains 'Candy Chaos - Sweet Sort -' -> PASS",
+          "kaneCheck": {
+            "extracted": "Candy Chaos - Sweet Sort - Apps on Google Play",
+            "operator": "contains",
+            "expected": "Candy Chaos - Sweet Sort -"
+          }
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Velvet Chaos - Sweet Sort -\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: 'Candy Chaos - Sweet Sort - Apps on Google Play' -> 'Candy Chaos - Sweet Sort - Apps on Google Play'; contains 'Velvet Chaos - Sweet Sort -' -> FAIL",
+          "kaneCheck": {
+            "extracted": "Candy Chaos - Sweet Sort - Apps on Google Play",
+            "operator": "contains",
+            "expected": "Velvet Chaos - Sweet Sort -"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 0,
+          "text": "The app name shown on this store listing is \"Candy Chaos\" (ignoring letter case and punctuation)",
+          "answer": true,
+          "reason": "Reading the app name from the store listing: value: 'Candy Chaos - Sweet Sort' -> 'candy chaos - sweet sort' after ['lowercase']; equals 'candy chaos - sweet sort' -> PASS",
+          "kaneCheck": {
+            "extracted": "Candy Chaos - Sweet Sort",
+            "operator": "equals",
+            "expected": "candy chaos - sweet sort"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 0,
+          "text": "The app name shown on this store listing is clearly a different app than \"Candy Chaos\"",
+          "answer": true,
+          "reason": "Checking whether the listing names a different app: value: 'false' -> 'false'; equals 'false' -> PASS",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "false"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 1,
+          "text": "This store listing shows that the app is free to install: there is no purchase price to pay before installing it",
+          "answer": true,
+          "reason": "Reading the install action label: value: 'Install' -> 'Install' after ['strip']; equals 'Install' -> PASS",
+          "kaneCheck": {
+            "extracted": "Install",
+            "operator": "equals",
+            "expected": "Install"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 1,
+          "text": "This store listing shows a purchase price that must be paid before the app can be installed",
+          "answer": false,
+          "reason": "Checking whether a purchase price is required before installation: value: 'false' -> 'false'; equals 'true' -> FAIL",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 2,
+          "text": "This store listing states that the app offers in-app purchases",
+          "answer": true,
+          "reason": "Checking for the in-app purchases disclosure: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 2,
+          "text": "This store listing gives no indication anywhere that the app offers in-app purchases",
+          "answer": false,
+          "reason": "Checking for the in-app purchases disclosure: value: 'true' -> 'true'; equals 'false' -> FAIL",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "false"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 3,
+          "text": "This store listing states that the app contains ads",
+          "answer": true,
+          "reason": "Checking for the ads disclosure: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 3,
+          "text": "This store listing gives no indication anywhere that the app contains ads",
+          "answer": false,
+          "reason": "Checking for the ads disclosure: value: 'true' -> 'true'; equals 'false' -> FAIL",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "false"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 4,
+          "text": "This store listing shows the content rating PEGI 3",
+          "answer": true,
+          "reason": "Reading the content rating: value: 'PEGI 3' -> 'PEGI 3' after ['strip']; equals 'PEGI 3' -> PASS",
+          "kaneCheck": {
+            "extracted": "PEGI 3",
+            "operator": "equals",
+            "expected": "PEGI 3"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 4,
+          "text": "This store listing shows a content rating that is not PEGI 3",
+          "answer": false,
+          "reason": "Checking whether the content rating differs from PEGI 3: value: 'false' -> 'false'; equals 'true' -> FAIL",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "true"
+          }
+        }
+      ],
+      "stderrTail": [
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.ruicodex.candychaos",
+      "title": "Candy Chaos - Sweet Sort - Apps on Google Play"
+    },
+    {
+      "label": "Google Play (re-ask, visual)",
+      "assertionMode": "visual",
+      "exitCode": 0,
+      "durationMs": 34780,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 5.06,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"Candy Chaos - Sweet Sort -\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: 'Candy Chaos - Sweet Sort - Apps on Google Play' -> 'Candy Chaos - Sweet Sort - Apps on Google Play'; contains 'Candy Chaos - Sweet Sort -' -> PASS",
+          "kaneCheck": {
+            "extracted": "Candy Chaos - Sweet Sort - Apps on Google Play",
+            "operator": "contains",
+            "expected": "Candy Chaos - Sweet Sort -"
+          }
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Velvet Chaos - Sweet Sort -\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: 'Candy Chaos - Sweet Sort - Apps on Google Play' -> 'Candy Chaos - Sweet Sort - Apps on Google Play'; contains 'Velvet Chaos - Sweet Sort -' -> FAIL",
+          "kaneCheck": {
+            "extracted": "Candy Chaos - Sweet Sort - Apps on Google Play",
+            "operator": "contains",
+            "expected": "Velvet Chaos - Sweet Sort -"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 0,
+          "text": "The app name shown on this store listing is \"Candy Chaos\" (ignoring letter case and punctuation). Read the whole listing, including the details and information sections further down the page. Your earlier reading was: \"Reading the app name from the store listing: value: 'Candy Chaos - Sweet Sort' -> 'candy chaos - sweet sort' after ['lowercase']; equals 'candy chaos - sweet so\"",
+          "answer": true,
+          "reason": "Reading the app name from the store listing: value: 'Candy Chaos - Sweet Sort' -> 'candy chaos - sweet sort' after ['lowercase']; equals 'candy chaos - sweet sort' -> PASS",
+          "kaneCheck": {
+            "extracted": "Candy Chaos - Sweet Sort",
+            "operator": "equals",
+            "expected": "candy chaos - sweet sort"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 0,
+          "text": "The app name shown on this store listing is clearly a different app than \"Candy Chaos\". Read the whole listing, including the details and information sections further down the page. Your earlier reading was: \"Checking whether the listing names a different app: value: 'false' -> 'false'; equals 'false' -> PASS\"",
+          "answer": true,
+          "reason": "Checking whether the listing names a different app: value: 'false' -> 'false'; equals 'false' -> PASS",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "false"
+          }
+        }
+      ],
+      "stderrTail": [
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.ruicodex.candychaos",
+      "title": "Candy Chaos - Sweet Sort - Apps on Google Play"
+    },
+    {
+      "label": "App Store",
+      "assertionMode": "dom",
+      "exitCode": 0,
+      "durationMs": 43235,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 5.04,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"‎Candy Chaos - Sweet Sort App\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: '\\u200eCandy Chaos - Sweet Sort App - App Store' -> '\\u200eCandy Chaos - Sweet Sort App - App Store'; contains '\\u200eCandy Chaos - Sweet Sort App' -> PASS",
+          "kaneCheck": {
+            "extracted": "‎Candy Chaos - Sweet Sort App - App Store",
+            "operator": "contains",
+            "expected": "‎Candy Chaos - Sweet Sort App"
+          }
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Velvet Chaos - Sweet Sort App\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: '\\u200eCandy Chaos - Sweet Sort App - App Store' -> '\\u200eCandy Chaos - Sweet Sort App - App Store'; contains 'Velvet Chaos - Sweet Sort App' -> FAIL",
+          "kaneCheck": {
+            "extracted": "‎Candy Chaos - Sweet Sort App - App Store",
+            "operator": "contains",
+            "expected": "Velvet Chaos - Sweet Sort App"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 0,
+          "text": "The app name shown on this store listing is \"Candy Chaos\" (ignoring letter case and punctuation)",
+          "answer": true,
+          "reason": "Reading the app name from the store listing: value: 'Candy Chaos' -> 'candy chaos' after ['strip', 'lowercase']; equals 'Candy Chaos' -> 'candy chaos' -> PASS",
+          "kaneCheck": {
+            "extracted": "Candy Chaos",
+            "operator": "equals",
+            "expected": "Candy Chaos"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 0,
+          "text": "The app name shown on this store listing is clearly a different app than \"Candy Chaos\"",
+          "answer": true,
+          "reason": "Checking whether the listing is for a different app: value: 'false' -> 'false'; equals 'false' -> PASS",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "false"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 1,
+          "text": "This store listing shows that the app is free to install: there is no purchase price to pay before installing it",
+          "answer": true,
+          "reason": "Checking the listing’s installation price: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 1,
+          "text": "This store listing shows a purchase price that must be paid before the app can be installed",
+          "answer": true,
+          "reason": "Checking for a required purchase price: value: 'false' -> 'false'; equals 'false' -> PASS",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "false"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 2,
+          "text": "This store listing states that the app offers in-app purchases",
+          "answer": true,
+          "reason": "Checking the listing’s in-app-purchases information: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 2,
+          "text": "This store listing gives no indication anywhere that the app offers in-app purchases",
+          "answer": true,
+          "reason": "Checking for an in-app-purchases indication: value: 'false' -> 'false'; equals 'false' -> PASS",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "false"
+          }
+        }
+      ],
+      "stderrTail": [
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "https://apps.apple.com/us/app/candy-chaos-sweet-sort/id6779695174",
+      "title": "‎Candy Chaos - Sweet Sort App - App Store"
+    },
+    {
+      "label": "App Store (re-ask, visual)",
+      "assertionMode": "visual",
+      "exitCode": 0,
+      "durationMs": 49513,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 6.29,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"‎Candy Chaos - Sweet Sort App\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: '\\u200eCandy Chaos - Sweet Sort App - App Store' -> '\\u200eCandy Chaos - Sweet Sort App - App Store'; contains '\\u200eCandy Chaos - Sweet Sort App' -> PASS",
+          "kaneCheck": {
+            "extracted": "‎Candy Chaos - Sweet Sort App - App Store",
+            "operator": "contains",
+            "expected": "‎Candy Chaos - Sweet Sort App"
+          }
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Velvet Chaos - Sweet Sort App\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: '\\u200eCandy Chaos - Sweet Sort App - App Store' -> '\\u200eCandy Chaos - Sweet Sort App - App Store'; contains 'Velvet Chaos - Sweet Sort App' -> FAIL",
+          "kaneCheck": {
+            "extracted": "‎Candy Chaos - Sweet Sort App - App Store",
+            "operator": "contains",
+            "expected": "Velvet Chaos - Sweet Sort App"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 0,
+          "text": "The app name shown on this store listing is \"Candy Chaos\" (ignoring letter case and punctuation). Read the whole listing, including the details and information sections further down the page. Your earlier reading was: \"Reading the app name from the store listing: value: 'Candy Chaos' -> 'candy chaos' after ['strip', 'lowercase']; equals 'Candy Chaos' -> 'candy chaos' -> PASS\"",
+          "answer": true,
+          "reason": "Reading the app name from the store listing: value: 'Candy Chaos' -> 'candy chaos' after ['strip', 'lowercase']; equals 'Candy Chaos' -> 'candy chaos' -> PASS",
+          "kaneCheck": {
+            "extracted": "Candy Chaos",
+            "operator": "equals",
+            "expected": "Candy Chaos"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 0,
+          "text": "The app name shown on this store listing is clearly a different app than \"Candy Chaos\". Read the whole listing, including the details and information sections further down the page. Your earlier reading was: \"Checking whether the listing is for a different app: value: 'false' -> 'false'; equals 'false' -> PASS\"",
+          "answer": true,
+          "reason": "Checking whether the listing is for a different app: value: 'false' -> 'false'; equals 'false' -> PASS",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "false"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 1,
+          "text": "This store listing shows that the app is free to install: there is no purchase price to pay before installing it. Read the whole listing, including the details and information sections further down the page. Your earlier reading was: \"Checking the listing’s installation price: value: 'true' -> 'true'; equals 'true' -> PASS\"",
+          "answer": true,
+          "reason": "Checking the listing's installation price: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 1,
+          "text": "This store listing shows a purchase price that must be paid before the app can be installed. Read the whole listing, including the details and information sections further down the page. Your earlier reading was: \"Checking for a required purchase price: value: 'false' -> 'false'; equals 'false' -> PASS\"",
+          "answer": true,
+          "reason": "Checking for a required purchase price: value: 'false' -> 'false'; equals 'false' -> PASS",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "false"
+          }
+        },
+        {
+          "role": "p",
+          "claim": 2,
+          "text": "This store listing states that the app offers in-app purchases. Read the whole listing, including the details and information sections further down the page. Your earlier reading was: \"Checking the listing’s in-app-purchases information: value: 'true' -> 'true'; equals 'true' -> PASS\"",
+          "answer": true,
+          "reason": "Checking the listing's in-app-purchases information: value: 'true' -> 'true'; equals 'true' -> PASS",
+          "kaneCheck": {
+            "extracted": "true",
+            "operator": "equals",
+            "expected": "true"
+          }
+        },
+        {
+          "role": "notP",
+          "claim": 2,
+          "text": "This store listing gives no indication anywhere that the app offers in-app purchases. Read the whole listing, including the details and information sections further down the page. Your earlier reading was: \"Checking for an in-app-purchases indication: value: 'false' -> 'false'; equals 'false' -> PASS\"",
+          "answer": true,
+          "reason": "Checking for an in-app-purchases indication: value: 'false' -> 'false'; equals 'false' -> PASS",
+          "kaneCheck": {
+            "extracted": "false",
+            "operator": "equals",
+            "expected": "false"
+          }
+        }
+      ],
+      "stderrTail": [
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "https://apps.apple.com/us/app/candy-chaos-sweet-sort/id6779695174",
+      "title": "‎Candy Chaos - Sweet Sort App - App Store"
+    }
+  ],
+  "rows": [
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.candychaos",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.candychaos",
+      "claimType": "listing-name",
+      "statement": "the store link opens the listing for \"Candy Chaos\"",
+      "sourceQuote": "Candy Chaos",
+      "verdict": "INCONCLUSIVE",
+      "why": "Kane answered true to the claim and true to its negation",
+      "kane": {
+        "p": true,
+        "notP": true
+      },
+      "reasked": true,
+      "diagnosis": "Kane compiled the negation \"The app name shown on this store listing is clearly a different app than \"Candy Chaos\"\" into a check that expects \"false\" and read \"false\", so it answered true to both the claim and its negation (an inverted question)."
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.candychaos",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.candychaos",
+      "claimType": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free to play, with ads suitable for children and optional purchases.",
+      "verdict": "PROVED",
+      "why": "Reading the install action label: value: 'Install' -> 'Install' after ['strip']; equals 'Install' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.candychaos",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.candychaos",
+      "claimType": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "In-app purchases",
+      "verdict": "PROVED",
+      "why": "Checking for the in-app purchases disclosure: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.candychaos",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.candychaos",
+      "claimType": "contains-ads",
+      "statement": "the app contains ads",
+      "sourceQuote": "It is free to play, with ads suitable for children and optional purchases.",
+      "verdict": "PROVED",
+      "why": "Checking for the ads disclosure: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "Google Play",
+      "targetUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.candychaos",
+      "finalUrl": "https://play.google.com/store/apps/details?id=com.ruicodex.candychaos",
+      "claimType": "content-rating",
+      "statement": "the content rating is PEGI 3",
+      "sourceQuote": "Content rating: PEGI 3",
+      "verdict": "PROVED",
+      "why": "Reading the content rating: value: 'PEGI 3' -> 'PEGI 3' after ['strip']; equals 'PEGI 3' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false,
+      "diagnosis": null
+    },
+    {
+      "store": "App Store",
+      "targetUrl": "https://apps.apple.com/us/app/candy-chaos-sweet-sort/id6779695174",
+      "finalUrl": "https://apps.apple.com/us/app/candy-chaos-sweet-sort/id6779695174",
+      "claimType": "listing-name",
+      "statement": "the store link opens the listing for \"Candy Chaos\"",
+      "sourceQuote": "Candy Chaos",
+      "verdict": "INCONCLUSIVE",
+      "why": "Kane answered true to the claim and true to its negation",
+      "kane": {
+        "p": true,
+        "notP": true
+      },
+      "reasked": true,
+      "diagnosis": "Kane compiled the negation \"The app name shown on this store listing is clearly a different app than \"Candy Chaos\"\" into a check that expects \"false\" and read \"false\", so it answered true to both the claim and its negation (an inverted question)."
+    },
+    {
+      "store": "App Store",
+      "targetUrl": "https://apps.apple.com/us/app/candy-chaos-sweet-sort/id6779695174",
+      "finalUrl": "https://apps.apple.com/us/app/candy-chaos-sweet-sort/id6779695174",
+      "claimType": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free to play, with ads suitable for children and optional purchases.",
+      "verdict": "INCONCLUSIVE",
+      "why": "Kane answered true to the claim and true to its negation",
+      "kane": {
+        "p": true,
+        "notP": true
+      },
+      "reasked": true,
+      "diagnosis": "Kane compiled the negation \"This store listing shows a purchase price that must be paid before the app can be installed\" into a check that expects \"false\" and read \"false\", so it answered true to both the claim and its negation (an inverted question)."
+    },
+    {
+      "store": "App Store",
+      "targetUrl": "https://apps.apple.com/us/app/candy-chaos-sweet-sort/id6779695174",
+      "finalUrl": "https://apps.apple.com/us/app/candy-chaos-sweet-sort/id6779695174",
+      "claimType": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "In-app purchases",
+      "verdict": "INCONCLUSIVE",
+      "why": "Kane answered true to the claim and true to its negation",
+      "kane": {
+        "p": true,
+        "notP": true
+      },
+      "reasked": true,
+      "diagnosis": "Kane compiled the negation \"This store listing gives no indication anywhere that the app offers in-app purchases\" into a check that expects \"false\" and read \"false\", so it answered true to both the claim and its negation (an inverted question)."
+    }
+  ],
+  "sourceRows": [
+    {
+      "claimType": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free to play, with ads suitable for children and optional purchases.",
+      "verdict": "PROVED",
+      "why": "Checking the app's free download status: value: 'true' -> 'true'; equals 'true' -> PASS"
+    },
+    {
+      "claimType": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "In-app purchases",
+      "verdict": "PROVED",
+      "why": "Checking the app's in-app purchases status: value: 'true' -> 'true'; equals 'true' -> PASS"
+    },
+    {
+      "claimType": "contains-ads",
+      "statement": "the app contains ads",
+      "sourceQuote": "It is free to play, with ads suitable for children and optional purchases.",
+      "verdict": "PROVED",
+      "why": "Checking the app's advertising status: value: 'true' -> 'true'; equals 'true' -> PASS"
+    },
+    {
+      "claimType": "content-rating",
+      "statement": "the content rating is PEGI 3",
+      "sourceQuote": "Content rating: PEGI 3",
+      "verdict": "PROVED",
+      "why": "Checking the app's content rating: value: 'true' -> 'true'; equals 'true' -> PASS"
+    }
+  ],
+  "notes": [],
+  "finalUrl": "https://ruicodex.com/Products/candy-chaos",
+  "title": "Candy Chaos: Sweet Sort, a Family Puzzle Game | Rui Codex",
+  "productName": "Candy Chaos",
+  "claims": [
+    {
+      "type": "listing-name",
+      "statement": "the store link opens the listing for \"Candy Chaos\"",
+      "sourceQuote": "Candy Chaos",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "The app name shown on this store listing is \"Candy Chaos\" (ignoring letter case and punctuation)",
+      "notP": "The app name shown on this store listing is clearly a different app than \"Candy Chaos\""
+    },
+    {
+      "type": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free to play, with ads suitable for children and optional purchases.",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "This store listing shows that the app is free to install: there is no purchase price to pay before installing it",
+      "notP": "This store listing shows a purchase price that must be paid before the app can be installed"
+    },
+    {
+      "type": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "In-app purchases",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "This store listing states that the app offers in-app purchases",
+      "notP": "This store listing gives no indication anywhere that the app offers in-app purchases"
+    },
+    {
+      "type": "contains-ads",
+      "statement": "the app contains ads",
+      "sourceQuote": "It is free to play, with ads suitable for children and optional purchases.",
+      "appliesTo": [
+        "play",
+        "fixture"
+      ],
+      "p": "This store listing states that the app contains ads",
+      "notP": "This store listing gives no indication anywhere that the app contains ads"
+    },
+    {
+      "type": "content-rating",
+      "statement": "the content rating is PEGI 3",
+      "sourceQuote": "Content rating: PEGI 3",
+      "appliesTo": [
+        "play",
+        "fixture"
+      ],
+      "p": "This store listing shows the content rating PEGI 3",
+      "notP": "This store listing shows a content rating that is not PEGI 3"
+    }
+  ],
+  "targets": [
+    {
+      "kind": "play",
+      "label": "Google Play",
+      "key": "play:com.ruicodex.candychaos",
+      "url": "https://play.google.com/store/apps/details?id=com.ruicodex.candychaos",
+      "linkText": "GET IT ON Google Play (opens in a new tab)"
+    },
+    {
+      "kind": "appstore",
+      "label": "App Store",
+      "key": "appstore:6779695174",
+      "url": "https://apps.apple.com/us/app/candy-chaos-sweet-sort/id6779695174",
+      "linkText": "DOWNLOAD ON THE App Store (opens in a new tab)"
+    }
+  ],
+  "credits": 29.48,
+  "summary": {
+    "total": 8,
+    "PROVED": 4,
+    "REFUTED": 0,
+    "INCONCLUSIVE": 4,
+    "UNTRUSTED": 0,
+    "ABSENT": 0
+  },
+  "exitCode": 2,
+  "files": {
+    "json": "runs\\2026-11-12T08-07-55-062Z_ruicodex-com-Products-candy-chaos.json",
+    "md": "runs\\2026-11-12T08-07-55-062Z_ruicodex-com-Products-candy-chaos.md"
+  }
+}

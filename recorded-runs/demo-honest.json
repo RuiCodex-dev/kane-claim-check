@@ -1,0 +1,359 @@
+{
+  "tool": "kane-claim-check",
+  "version": "0.1.0",
+  "checkedAt": "2026-11-12T07:43:28.018Z",
+  "url": "http://127.0.0.1:65111/fixtures/honest/",
+  "batches": [
+    {
+      "label": "source page",
+      "exitCode": 0,
+      "durationMs": 65156,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 4.81085,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"Tally Tiles | a fictional demo\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: 'Tally Tiles | a fictional demo app' -> 'Tally Tiles | a fictional demo app'; contains 'Tally Tiles | a fictional demo' -> PASS"
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Tally Tiles | a Velvet demo\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: 'Tally Tiles | a fictional demo app' -> 'Tally Tiles | a fictional demo app'; contains 'Tally Tiles | a Velvet demo' -> FAIL"
+        },
+        {
+          "role": "source",
+          "claim": 1,
+          "text": "This page states that the app is free to download",
+          "answer": true,
+          "reason": "Checking the app description for free download availability: value: 'true' -> 'true'; equals 'true' -> PASS"
+        },
+        {
+          "role": "source",
+          "claim": 2,
+          "text": "This page states that the app offers in-app purchases",
+          "answer": true,
+          "reason": "Checking the app description for in-app purchases: value: 'true' -> 'true'; equals 'true' -> PASS"
+        },
+        {
+          "role": "source",
+          "claim": 3,
+          "text": "This page states that the app contains ads",
+          "answer": true,
+          "reason": "Checking the app description for ads: value: 'true' -> 'true'; equals 'true' -> PASS"
+        },
+        {
+          "role": "source",
+          "claim": 4,
+          "text": "This page states that the content rating is PEGI 3",
+          "answer": true,
+          "reason": "Checking the listed content rating: value: 'true' -> 'true'; equals 'true' -> PASS"
+        }
+      ],
+      "stderrTail": [
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "http://127.0.0.1:65111/fixtures/honest/",
+      "title": "Tally Tiles | a fictional demo app"
+    },
+    {
+      "label": "fixture store",
+      "exitCode": 0,
+      "durationMs": 78245,
+      "trust": "TRUSTED",
+      "why": "identity gate true and near-miss control false",
+      "credits": 7.3847,
+      "conditions": [
+        {
+          "role": "identity",
+          "text": "The browser tab title contains the text \"Tally Tiles - Apps on the\"",
+          "answer": true,
+          "reason": "Reading the browser tab title: value: 'Tally Tiles - Apps on the Fixture Store' -> 'Tally Tiles - Apps on the Fixture Store'; contains 'Tally Tiles - Apps on the' -> PASS"
+        },
+        {
+          "role": "control",
+          "text": "The browser tab title contains the text \"Velvet Tiles - Apps on the\"",
+          "answer": false,
+          "reason": "Reading the browser tab title: value: 'Tally Tiles - Apps on the Fixture Store' -> 'Tally Tiles - Apps on the Fixture Store'; contains 'Velvet Tiles - Apps on the' -> FAIL"
+        },
+        {
+          "role": "p",
+          "claim": 0,
+          "text": "The app name shown on this store listing is \"Tally Tiles\" (ignoring letter case and punctuation)",
+          "answer": true,
+          "reason": "Reading the normalized app name from the store listing: value: 'tallytiles' -> 'tallytiles'; equals 'tallytiles' -> PASS"
+        },
+        {
+          "role": "notP",
+          "claim": 0,
+          "text": "The app name shown on this store listing is clearly a different app than \"Tally Tiles\"",
+          "answer": false,
+          "reason": "Checking whether the listing app name differs from Tally Tiles: value: 'false' -> 'false'; equals 'true' -> FAIL"
+        },
+        {
+          "role": "p",
+          "claim": 1,
+          "text": "This store listing shows that the app is free to install: there is no purchase price to pay before installing it",
+          "answer": true,
+          "reason": "Checking whether the listing shows a free installation price: value: 'true' -> 'true'; equals 'true' -> PASS"
+        },
+        {
+          "role": "notP",
+          "claim": 1,
+          "text": "This store listing shows a purchase price that must be paid before the app can be installed",
+          "answer": false,
+          "reason": "Checking whether the listing shows a required purchase price: value: 'false' -> 'false'; equals 'true' -> FAIL"
+        },
+        {
+          "role": "p",
+          "claim": 2,
+          "text": "This store listing states that the app offers in-app purchases",
+          "answer": true,
+          "reason": "Checking whether the listing states in-app purchases are offered: value: 'true' -> 'true'; equals 'true' -> PASS"
+        },
+        {
+          "role": "notP",
+          "claim": 2,
+          "text": "This store listing gives no indication anywhere that the app offers in-app purchases",
+          "answer": false,
+          "reason": "Checking whether the listing lacks an in-app purchases indication: value: 'false' -> 'false'; equals 'true' -> FAIL"
+        },
+        {
+          "role": "p",
+          "claim": 3,
+          "text": "This store listing states that the app contains ads",
+          "answer": true,
+          "reason": "Checking whether the listing states that the app contains ads: value: 'true' -> 'true'; equals 'true' -> PASS"
+        },
+        {
+          "role": "notP",
+          "claim": 3,
+          "text": "This store listing gives no indication anywhere that the app contains ads",
+          "answer": false,
+          "reason": "Checking whether the listing lacks an ads indication: value: 'false' -> 'false'; equals 'true' -> FAIL"
+        },
+        {
+          "role": "p",
+          "claim": 4,
+          "text": "This store listing shows the content rating PEGI 3",
+          "answer": true,
+          "reason": "Checking whether the listing shows PEGI 3: value: 'true' -> 'true'; equals 'true' -> PASS"
+        },
+        {
+          "role": "notP",
+          "claim": 4,
+          "text": "This store listing shows a content rating that is not PEGI 3",
+          "answer": false,
+          "reason": "Checking whether the listing has a non-PEGI 3 rating: value: 'false' -> 'false'; equals 'true' -> FAIL"
+        }
+      ],
+      "stderrTail": [
+        "Skill update available: not installed → 0.1.4 — run `kane-cli install skill`",
+        "Running on: Desktop · Chrome"
+      ],
+      "url": "http://127.0.0.1:65111/fixtures/store/tally-tiles/",
+      "title": "Tally Tiles - Apps on the Fixture Store"
+    }
+  ],
+  "rows": [
+    {
+      "store": "fixture store",
+      "targetUrl": "http://127.0.0.1:65111/fixtures/store/tally-tiles/",
+      "finalUrl": "http://127.0.0.1:65111/fixtures/store/tally-tiles/",
+      "claimType": "listing-name",
+      "statement": "the store link opens the listing for \"Tally Tiles\"",
+      "sourceQuote": "Tally Tiles",
+      "verdict": "PROVED",
+      "why": "Reading the normalized app name from the store listing: value: 'tallytiles' -> 'tallytiles'; equals 'tallytiles' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false
+    },
+    {
+      "store": "fixture store",
+      "targetUrl": "http://127.0.0.1:65111/fixtures/store/tally-tiles/",
+      "finalUrl": "http://127.0.0.1:65111/fixtures/store/tally-tiles/",
+      "claimType": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free to download, with ads and optional in-app purchases.",
+      "verdict": "PROVED",
+      "why": "Checking whether the listing shows a free installation price: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false
+    },
+    {
+      "store": "fixture store",
+      "targetUrl": "http://127.0.0.1:65111/fixtures/store/tally-tiles/",
+      "finalUrl": "http://127.0.0.1:65111/fixtures/store/tally-tiles/",
+      "claimType": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "It is free to download, with ads and optional in-app purchases.",
+      "verdict": "PROVED",
+      "why": "Checking whether the listing states in-app purchases are offered: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false
+    },
+    {
+      "store": "fixture store",
+      "targetUrl": "http://127.0.0.1:65111/fixtures/store/tally-tiles/",
+      "finalUrl": "http://127.0.0.1:65111/fixtures/store/tally-tiles/",
+      "claimType": "contains-ads",
+      "statement": "the app contains ads",
+      "sourceQuote": "It is free to download, with ads and optional in-app purchases.",
+      "verdict": "PROVED",
+      "why": "Checking whether the listing states that the app contains ads: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false
+    },
+    {
+      "store": "fixture store",
+      "targetUrl": "http://127.0.0.1:65111/fixtures/store/tally-tiles/",
+      "finalUrl": "http://127.0.0.1:65111/fixtures/store/tally-tiles/",
+      "claimType": "content-rating",
+      "statement": "the content rating is PEGI 3",
+      "sourceQuote": "Content rating: PEGI 3",
+      "verdict": "PROVED",
+      "why": "Checking whether the listing shows PEGI 3: value: 'true' -> 'true'; equals 'true' -> PASS",
+      "kane": {
+        "p": true,
+        "notP": false
+      },
+      "reasked": false
+    }
+  ],
+  "sourceRows": [
+    {
+      "claimType": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free to download, with ads and optional in-app purchases.",
+      "verdict": "PROVED",
+      "why": "Checking the app description for free download availability: value: 'true' -> 'true'; equals 'true' -> PASS"
+    },
+    {
+      "claimType": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "It is free to download, with ads and optional in-app purchases.",
+      "verdict": "PROVED",
+      "why": "Checking the app description for in-app purchases: value: 'true' -> 'true'; equals 'true' -> PASS"
+    },
+    {
+      "claimType": "contains-ads",
+      "statement": "the app contains ads",
+      "sourceQuote": "It is free to download, with ads and optional in-app purchases.",
+      "verdict": "PROVED",
+      "why": "Checking the app description for ads: value: 'true' -> 'true'; equals 'true' -> PASS"
+    },
+    {
+      "claimType": "content-rating",
+      "statement": "the content rating is PEGI 3",
+      "sourceQuote": "Content rating: PEGI 3",
+      "verdict": "PROVED",
+      "why": "Checking the listed content rating: value: 'true' -> 'true'; equals 'true' -> PASS"
+    }
+  ],
+  "notes": [],
+  "finalUrl": "http://127.0.0.1:65111/fixtures/honest/",
+  "title": "Tally Tiles | a fictional demo app",
+  "productName": "Tally Tiles",
+  "claims": [
+    {
+      "type": "listing-name",
+      "statement": "the store link opens the listing for \"Tally Tiles\"",
+      "sourceQuote": "Tally Tiles",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "The app name shown on this store listing is \"Tally Tiles\" (ignoring letter case and punctuation)",
+      "notP": "The app name shown on this store listing is clearly a different app than \"Tally Tiles\""
+    },
+    {
+      "type": "free",
+      "statement": "the app is free to download",
+      "sourceQuote": "It is free to download, with ads and optional in-app purchases.",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "This store listing shows that the app is free to install: there is no purchase price to pay before installing it",
+      "notP": "This store listing shows a purchase price that must be paid before the app can be installed"
+    },
+    {
+      "type": "in-app-purchases",
+      "statement": "the app offers in-app purchases",
+      "sourceQuote": "It is free to download, with ads and optional in-app purchases.",
+      "appliesTo": [
+        "play",
+        "appstore",
+        "appgallery",
+        "fixture"
+      ],
+      "p": "This store listing states that the app offers in-app purchases",
+      "notP": "This store listing gives no indication anywhere that the app offers in-app purchases"
+    },
+    {
+      "type": "contains-ads",
+      "statement": "the app contains ads",
+      "sourceQuote": "It is free to download, with ads and optional in-app purchases.",
+      "appliesTo": [
+        "play",
+        "fixture"
+      ],
+      "p": "This store listing states that the app contains ads",
+      "notP": "This store listing gives no indication anywhere that the app contains ads"
+    },
+    {
+      "type": "content-rating",
+      "statement": "the content rating is PEGI 3",
+      "sourceQuote": "Content rating: PEGI 3",
+      "appliesTo": [
+        "play",
+        "fixture"
+      ],
+      "p": "This store listing shows the content rating PEGI 3",
+      "notP": "This store listing shows a content rating that is not PEGI 3"
+    }
+  ],
+  "targets": [
+    {
+      "kind": "fixture",
+      "label": "fixture store",
+      "key": "fixture:/fixtures/store/tally-tiles/",
+      "url": "http://127.0.0.1:65111/fixtures/store/tally-tiles/",
+      "linkText": "Get it on the fixture store"
+    }
+  ],
+  "credits": 12.2,
+  "summary": {
+    "total": 5,
+    "PROVED": 5,
+    "REFUTED": 0,
+    "INCONCLUSIVE": 0,
+    "UNTRUSTED": 0,
+    "ABSENT": 0
+  },
+  "exitCode": 0,
+  "files": {
+    "json": "runs\\2026-11-12T07-43-28-018Z_127-0-0-1-65111-fixtures-honest.json",
+    "md": "runs\\2026-11-12T07-43-28-018Z_127-0-0-1-65111-fixtures-honest.md"
+  }
+}

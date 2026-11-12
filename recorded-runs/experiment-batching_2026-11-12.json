@@ -1,0 +1,116 @@
+[
+  {
+    "trial": 1,
+    "design": "mixed",
+    "notP": 5,
+    "notPAnsweredTrue": 0,
+    "gates": [
+      true,
+      false
+    ],
+    "expectations": [
+      "true",
+      "true",
+      "true",
+      "true",
+      "true"
+    ],
+    "credits": 6.45861,
+    "ms": 46887
+  },
+  {
+    "trial": 1,
+    "design": "notPonly",
+    "notP": 5,
+    "notPAnsweredTrue": 0,
+    "gates": [
+      true,
+      false
+    ],
+    "expectations": [
+      "true",
+      "true",
+      "false",
+      "false",
+      "true"
+    ],
+    "credits": 5.44655,
+    "ms": 31143
+  },
+  {
+    "trial": 2,
+    "design": "mixed",
+    "notP": 5,
+    "notPAnsweredTrue": 0,
+    "gates": [
+      true,
+      false
+    ],
+    "expectations": [
+      "true",
+      "true",
+      "true",
+      "true",
+      "true"
+    ],
+    "credits": 4.1360600000000005,
+    "ms": 40128
+  },
+  {
+    "trial": 2,
+    "design": "notPonly",
+    "notP": 5,
+    "notPAnsweredTrue": 0,
+    "gates": [
+      true,
+      false
+    ],
+    "expectations": [
+      "true",
+      "true",
+      "false",
+      "false",
+      "true"
+    ],
+    "credits": 3.4546199999999994,
+    "ms": 35976
+  },
+  {
+    "trial": 3,
+    "design": "mixed",
+    "notP": 5,
+    "notPAnsweredTrue": 1,
+    "gates": [
+      true,
+      false
+    ],
+    "expectations": [
+      "true",
+      "true",
+      "true",
+      "true",
+      "true"
+    ],
+    "credits": 4.48691,
+    "ms": 44094
+  },
+  {
+    "trial": 3,
+    "design": "notPonly",
+    "notP": 5,
+    "notPAnsweredTrue": 0,
+    "gates": [
+      true,
+      false
+    ],
+    "expectations": [
+      "true",
+      "true",
+      "true",
+      "true",
+      "true"
+    ],
+    "credits": 2.12617,
+    "ms": 29221
+  }
+]

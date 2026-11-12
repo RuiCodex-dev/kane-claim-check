@@ -1,0 +1,19 @@
+{
+  "about": "Known answers for `claimcheck demo`. Tally Tiles' page matches its store page; Night Owl Notes' page promises four things its store page contradicts.",
+  "pages": {
+    "/fixtures/honest/": {
+      "listing-name": "PROVED",
+      "free": "PROVED",
+      "in-app-purchases": "PROVED",
+      "contains-ads": "PROVED",
+      "content-rating": "PROVED"
+    },
+    "/fixtures/drift/": {
+      "listing-name": "PROVED",
+      "free": "REFUTED",
+      "no-in-app-purchases": "REFUTED",
+      "no-ads": "REFUTED",
+      "content-rating": "REFUTED"
+    }
+  }
+}
